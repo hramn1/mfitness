@@ -1,0 +1,19 @@
+.top-head{
+	background-color: $top-head;
+	&__content{
+		@include flexCase();
+		margin: 0 23px;
+		color: $white;
+		font-size: 14px;
+		padding-top: 10px;
+		padding-bottom: 8px;
+
+	}
+}
+.top-links{
+	color: $white;
+	&__link{
+		color: $white;
+		padding-right: 22px;
+	}
+}
