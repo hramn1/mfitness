@@ -2,7 +2,7 @@
 	background-color: $top-head;
 	&__content{
 		@include flexCase();
-		margin: 0 23px;
+		margin: 0 23px 0 12px;
 		color: $white;
 		font-size: 14px;
 		padding-top: 10px;
@@ -14,6 +14,144 @@
 	color: $white;
 	&__link{
 		color: $white;
-		padding-right: 22px;
+		padding-right: 11px;
+    padding-left: 11px;
 	}
+}
+.region-chose{
+  padding: 0;
+  background-color: transparent;
+  color: $white;
+  border: 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.bottom-head{
+  display: grid;
+  grid-template-areas:
+    "L M C"
+    "OM S CA";
+  justify-content: space-between;
+  grid-template-columns: 216px 816px auto;
+  row-gap: 12px;
+  &__catalog-menu{
+    @include btn();
+    @include typography(14px, 700);
+    padding-left: 40px;
+    text-align: left;
+    position: relative;
+    &::before{
+      @include pseudoEl(15px, 15px);
+      background-image: url(../img/menu_closed.svg);
+      left: 13px;
+    }
+  }
+  &__logo{
+    margin-top: 12px;
+  }
+  &__menu{
+    display: flex;
+    align-items: center;
+    & a{
+      color: $blue-color;
+      @include typography(14px, 700);
+      padding-right: 15px;
+    }
+  }
+  &__contact{
+    display: flex;
+    align-items: center;
+  }
+  &__phone{
+    color: $top-head;
+    margin-left: 25px;
+    padding-left: 15px;
+    position: relative;
+    &::before{
+      display: block;
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 2px;
+      left: -7px;
+      background-image: url(../img/phone-alt.svg);
+    }
+  }
+  &__mail{
+    color: $top-head;
+    padding-left: 15px;
+    position: relative;
+    &::before{
+      display: block;
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 2px;
+      left: -7px;
+      background-image: url(../img/envelope.svg);
+    }
+  }
+  &__search{
+    display: flex;
+  }
+}
+.users-info{
+  display: flex;
+  justify-content: space-between;
+  &__cart{
+    padding-left: 45px;
+    position: relative;
+    &::before{
+      @include pseudoEl(35px, 33px);
+      background-image: url(../img/shopping-cart-dark.svg);
+      left: 0;
+    }
+    & p {
+      @include typography(12px, 400);
+      color: $top-head;
+      margin: 0;
+    }
+    & p:first-child{
+      @include typography(14px, 400);
+      margin-bottom: 7px;
+    }
+  }
+  &__lk{
+    padding-left: 45px;
+    position: relative;
+    &::before{
+      @include pseudoEl(34px, 34px);
+      background-image: url(../img/user.svg);
+      left: 0;
+    }
+    & p {
+      @include typography(12px, 400);
+      color: $top-head;
+      margin: 0;
+    }
+    & p:first-child{
+      @include typography(14px, 400);
+      margin-bottom: 7px;
+    }
+  }
+}
+.search-form{
+  &__input{
+    border: 1px solid #c6c6c6;
+    flex-grow: 1;
+    padding-left: 25px;
+    @include typography(14px, 400);
+    &::placeholder{
+      color: #c6c6c6;
+    }
+  }
+  &__btn{
+    @include btn();
+    padding-left: 27px;
+    padding-right: 27px;
+    @include typography(16px, 700);
+    border-radius: 0 3px 3px 0;
+  }
 }

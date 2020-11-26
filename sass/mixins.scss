@@ -9,3 +9,18 @@
 	font-weight: $weight;
 	font-style: $style;
 }
+@mixin pseudoEl($width, $height){
+  display: block;
+  content: "";
+  position: absolute;
+  width: $width;
+  height: $height;
+}
+@mixin btn(){
+  color: #ffffff;
+  background-color: #00649A;
+  border: 0;
+  text-align: center;
+  border-radius: 3px;
+  cursor: pointer;
+}
