@@ -20,6 +20,27 @@
 	@include resetMar();
 	margin-top: 19px;
 	@include flexCase();
+	color: #333333;
+	&__item{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 216px;
+		margin-bottom: 24px;
+		& p{
+		 text-align: center;
+		 padding: 0 5px;
+		}
+	}
+	&__price{
+		text-align: center;
+	}
+}
+.popular-catalog{
+	@include flexCase();
+	@include resetMar();
+	list-style: none;
+	color: #333333;
 	&__item{
 		display: flex;
 		flex-direction: column;

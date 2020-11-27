@@ -30,6 +30,9 @@
 		&--violet{
 			background-color: #953ebd;
 		}
+		&--blue{
+			background-color: $blue-color;
+		}
 	}
 	&__text{
 		color: #ffffff;
@@ -57,6 +60,7 @@
 		}
 		&--old{
 			font-weight: 400;
+			text-decoration: line-through;
 			& span{
 				font-weight: 700;
 			}
