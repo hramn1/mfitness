@@ -5,17 +5,28 @@
 		margin: 0 23px 0 12px;
 		color: $white;
 		font-size: 14px;
-		padding-top: 10px;
-		padding-bottom: 8px;
 
 	}
 }
 .top-links{
 	color: $white;
+	display: flex;
 	&__link{
 		color: $white;
 		padding-right: 11px;
     padding-left: 11px;
+		padding-top: 10px;
+		padding-bottom: 8px;
+		&:hover{
+			color: darken($white, 15%);
+		}
+		&:active{
+			color: darken($white, 45%)
+		}
+		&--active{
+			background-color: #fff;
+			color: $top-head;
+		}
 	}
 }
 .region-chose{
