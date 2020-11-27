@@ -48,13 +48,14 @@
   }
   &__logo{
     margin-top: 12px;
+		grid-area: L;
   }
   &__menu{
     display: flex;
     align-items: center;
     & a{
       color: $blue-color;
-      @include typography(14px, 700);
+      @include typography(16px, 700);
       padding-right: 15px;
     }
   }

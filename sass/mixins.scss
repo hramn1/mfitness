@@ -24,3 +24,7 @@
   border-radius: 3px;
   cursor: pointer;
 }
+@mixin resetMar(){
+	margin: 0;
+	padding: 0;
+}

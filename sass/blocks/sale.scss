@@ -1,0 +1,65 @@
+.slider-block{
+	background-color: $white;
+	margin-top: 25px;
+	border-radius: 3px;
+}
+.sales-block{
+	margin-top: 20px;
+	&__items{
+		@include flexCase();
+		@include resetMar();
+	}
+	&__item{
+		list-style: none;
+		display: flex;
+		border-radius: 10px;
+		justify-content: space-between;
+		padding: 13px 30px 13px 23px;
+		align-items: center;
+		flex-grow: 1;
+		margin-right: 24px;
+		&:last-child{
+			margin-right: 0;
+		}
+		&--green{
+			background-color: #009a59;
+		}
+		&--muar{
+			background-color: #009a9a;
+		}
+		&--violet{
+			background-color: #953ebd;
+		}
+	}
+	&__text{
+		color: #ffffff;
+		text-align: right;
+		flex-basis: 50%;
+		@include typography(24px, 700);
+		& span{
+			font-size: 36px;
+		}
+	}
+}
+.sale-price{
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+	&__item{
+		@include typography(16px, 700);
+		color: #333333;
+		&--new{
+			color: #d70303;
+			font-size: 18px;
+			& span{
+				font-size: 20px;
+			}
+		}
+		&--old{
+			font-weight: 400;
+			& span{
+				font-weight: 700;
+			}
+		}
+	}
+}

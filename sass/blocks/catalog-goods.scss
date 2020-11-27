@@ -1,0 +1,37 @@
+.sales-goods{
+	margin-top: 24px;
+	&__title{
+		@include resetMar();
+		@include typography(24px, 700);
+		color: $top-head;
+	}
+	&__moreBtn{
+		@include btn();
+		text-align: center;
+		display: block;
+		width: 216px;
+		margin: 5px auto;
+		padding: 12px 10px 9px;
+		@include typography(14px, 400);
+	}
+}
+.sales-catalog{
+	list-style: none;
+	@include resetMar();
+	margin-top: 19px;
+	@include flexCase();
+	&__item{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 216px;
+		margin-bottom: 24px;
+		& p{
+		 text-align: center;
+		 padding: 0 5px;
+		}
+	}
+	&__price{
+		text-align: center;
+	}
+}
