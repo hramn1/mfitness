@@ -1,0 +1,20 @@
+.popular-brands{
+  &__title{
+    @include typography(24px,700);
+    color: $top-head;
+  }
+  &__list{
+    @include flexCase();
+    @include resetMar();
+    list-style: none;
+  }
+  &__item{
+    flex-basis: 225px;
+    text-align: center;
+    margin-bottom: 20px;
+    align-self: center;
+    & img{
+
+    }
+  }
+}

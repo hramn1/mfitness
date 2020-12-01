@@ -1,0 +1,18 @@
+.main-footer{
+  background-color: $blue-color;
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+.footer-content{
+  display: grid;
+  grid-template-columns: 350px auto 220px;
+}
+.footer-catalog{
+  &__list{
+    @include resetMar();
+  }
+  &__item{
+    display: inline-block;
+    width: 49%;
+  }
+}

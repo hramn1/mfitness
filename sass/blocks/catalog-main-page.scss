@@ -1,0 +1,31 @@
+.catalog-main-page{
+  @include flexCase();
+  justify-content: flex-start;
+  &__item{
+    width: 225px;
+    margin: 10px 5px;
+  }
+  &__main-title{
+    flex-basis: 100%;
+    @include typography(24px, 700);
+    color: $top-head;
+  }
+  &__title{
+    @include typography(18px, 500);
+    color: $top-head;
+    margin-bottom: 0;
+  }
+  &__list{
+    padding-left: 10px;
+    list-style: none;
+    margin-top: 10px;
+    & a{
+      @include typography(14px, 400);
+      line-height: 140%;
+      color: $top-head;
+      &:hover{
+        color: lighten($top-head, 20%);
+      }
+    }
+  }
+}
