@@ -2,10 +2,15 @@
   background-color: $blue-color;
   padding-top: 25px;
   padding-bottom: 20px;
+  & h2 {
+    @include typography(18px, 700);
+    color: $white;
+  }
 }
 .footer-content{
   display: grid;
-  grid-template-columns: 350px auto 220px;
+  grid-template-columns: 300px 600px auto;
+  grid-gap: 20px;
 }
 .footer-catalog{
   &__list{
@@ -14,5 +19,75 @@
   &__item{
     display: inline-block;
     width: 49%;
+    & a{
+      @include typography(16px, 400);
+      color: $white;
+      line-height: 130%;
+      &:hover{
+        color: darken($white, 30%);
+      }
+      &:active{
+        opacity: 0.5;
+      }
+    }
   }
+}
+.footer-menu{
+  &__list{
+    list-style: none;
+    @include resetMar();
+
+  }
+  &__item{
+    & a{
+      @include typography(16px, 400);
+      color: $white;
+      line-height: 130%;
+      &:hover{
+        color: darken($white, 30%);
+      }
+      &:active{
+        opacity: 0.5;
+      }
+    }
+  }
+}
+.footer-social{
+  &__list{
+    @include flexCase();
+    @include resetMar();
+    justify-content: flex-start;
+    font-size: 0;
+    list-style: none;
+  }
+  &__item{
+    width: 35px;
+    height: 35px;
+    background-color: #dddddd;
+    border-radius: 50%;
+    margin-right: 5px;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    opacity: 0.6;
+    background-position: 50% 50%;
+    &--fb{
+      background-image: url(../img/facebook-f.svg);
+      background-position: 70% 110%;
+    }
+    &--inst{
+      background-image: url(../img/instagram.svg);
+      background-size: 60%;
+    }
+    &--youtube{
+      background-image: url(../img/youtube.svg);
+      background-size: 60%;
+    }
+  }
+}
+.footer-copyright{
+  color: $white;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin-top: 40px;
+  @include typography(16px, 400);
 }
