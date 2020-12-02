@@ -51,6 +51,9 @@
     padding-left: 40px;
     text-align: left;
     position: relative;
+		&:hover{
+			background-color: darken($blue-color, 10%);
+		}
     &::before{
       @include pseudoEl(15px, 15px);
       background-image: url(../img/menu_closed.svg);
@@ -165,5 +168,8 @@
     padding-right: 27px;
     @include typography(16px, 700);
     border-radius: 0 3px 3px 0;
+		&:hover{
+			background-color: darken($blue-color, 10%);
+		}
   }
 }
