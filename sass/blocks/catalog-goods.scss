@@ -1,3 +1,9 @@
+.popular-goods{
+	&__title{
+		@include typography(24px, 700);
+		color: $top-head;
+	}
+}
 .sales-goods{
 	margin-top: 24px;
 	&__title{
@@ -13,6 +19,9 @@
 		margin: 5px auto;
 		padding: 12px 10px 9px;
 		@include typography(14px, 400);
+		&:hover{
+			background-color: darken($blue-color, 20%);
+		}
 	}
 }
 .sales-catalog{
@@ -22,20 +31,31 @@
 	@include flexCase();
 	color: #333333;
 	&__item{
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
 		width: 220px;
 		margin-bottom: 24px;
 		box-sizing: border-box;
 		border: 1px solid transparent;
+		transition: border 500ms;
+		& a {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			color: $top-head;
+			transition: color 500ms;
 
+		}
 		& p{
 		 text-align: center;
 		 padding: 0 5px;
 		}
 		&:hover{
-			border: 1px solid #00527e;
+			border: 1px solid $blue-color;
+			transition: border 500ms;
+			& a {
+				color: $blue-color;
+				transition: color 500ms;
+			}
 		}
 		&:active{
 			opacity: 0.6
@@ -50,12 +70,27 @@
 	@include resetMar();
 	list-style: none;
 	color: #333333;
-	&__item{
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
+	&__item {
 		width: 216px;
 		margin-bottom: 24px;
+		border: 1px solid transparent;
+		transition: border 500ms;
+		& a {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 100%;
+			color: #333333;
+			transition: color 500ms;
+		}
+		&:hover{
+			border: 1px solid $blue-color;
+			transition: border 500ms;
+			& a {
+				color: $blue-color;
+				transition: color 500ms;
+			}
+		}
 		& p{
 		 text-align: center;
 		 padding: 0 5px;
