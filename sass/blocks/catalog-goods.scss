@@ -90,13 +90,17 @@
 				color: $blue-color;
 				transition: color 500ms;
 			}
+      & .popular-catalog__price {
+        color: $top-head;
+      }
 		}
-		& p{
-		 text-align: center;
-		 padding: 0 5px;
-		}
+		& p {
+      text-align: center;
+      padding: 0 5px;
+    }
 	}
 	&__price{
 		text-align: center;
+    @include typography(18px, 700);
 	}
 }
