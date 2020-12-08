@@ -49,6 +49,7 @@
   &__dropdown-menu{
     position: absolute;
     background-color: #fff;
+    display: none;
     top: 130px;
     width: 100%;
     height: 640px;
@@ -161,6 +162,36 @@
       margin-bottom: 7px;
     }
   }
+}
+.cart-icon{
+  position: absolute;
+  background-color: $blue-color;
+  color: #ffffff;
+  width: 16px;
+  font-size: 10px;
+  line-height: 16px;
+  text-align: center;
+  height: 16px;
+  border-radius: 50%;
+  top: 0;
+  left: 23px;
+}
+.lk-icon{
+  position: absolute;
+  background-color: $blue-color;
+  color: #ffffff;
+  background-image: url(../img/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: 50% 50%;
+  width: 16px;
+  font-size: 10px;
+  line-height: 16px;
+  text-align: center;
+  height: 16px;
+  border-radius: 50%;
+  top: 0;
+  left: 23px;
 }
 .dropdown-menu{
   display: flex;
