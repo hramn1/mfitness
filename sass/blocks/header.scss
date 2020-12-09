@@ -26,6 +26,12 @@
 		&--active{
 			background-color: #fff;
 			color: $top-head;
+			&:hover{
+				color: lighten($top-head, 20%);
+			}
+			&:active{
+				color: lighten($top-head, 35%);
+			}
 		}
 	}
 }
@@ -55,6 +61,7 @@
     height: 640px;
     border-radius: 3px;
     border: 1px solid #333333;
+		z-index: 10;
     &--show{
       display: block;
     }
@@ -68,11 +75,48 @@
 		&:hover{
 			background-color: darken($blue-color, 10%);
 		}
-    &::before{
-      @include pseudoEl(15px, 15px);
-      background-image: url(../img/menu_closed.svg);
-      left: 13px;
-    }
+		& .bottom-head__menu-btn{
+			position: absolute;
+			display: inline-block;
+			width: 17px;
+			height: 3px;
+			background-color: #fff;
+			top: 17px;
+			left: 13px;
+			transition: all 400ms ease;
+			&::before{
+				@include pseudoEl(17px, 3px);
+				top: -6px;
+				background-color: #fff;
+				transition: all 400ms ease;
+			}
+			&::after{
+				@include pseudoEl(17px, 3px);
+				top: 6px;
+				background-color: #fff;
+				transition: all 400ms ease;
+			}
+			&--closed{
+				background-color: transparent;
+				transition: all 400ms ease;
+				&::before{
+					transform: rotate(45deg);
+					transform-origin: 0 0;
+					transition: all 400ms ease;
+				}
+				&::after{
+					transform: rotate(-45deg) translateX(-1.5px) translateY(-1.5px);
+					transform-origin: 0 0;
+					transition: all 400ms ease;
+				}
+			}
+
+		}
+    // &::before{
+    //   @include pseudoEl(15px, 15px);
+    //   background-image: url(../img/menu_closed.svg);
+    //   left: 13px;
+    // }
   }
   &__logo{
     margin-top: 12px;
@@ -84,7 +128,25 @@
     & a{
       color: $blue-color;
       @include typography(16px, 700);
-      padding-right: 15px;
+      margin-right: 15px;
+			position: relative;
+			&::after{
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: -3px;
+				width: 0;
+				height: 2px;
+				background-color: #1564af;
+				transition: all .3s ease;
+				z-index: 1;
+			}
+			&:hover{
+				&::after{
+					width: 100%;
+				}
+			}
     }
   }
   &__contact{
@@ -96,6 +158,8 @@
     margin-left: 25px;
     padding-left: 15px;
     position: relative;
+		opacity: 1;
+		transition: opacity 400ms ease;
     &::before{
       display: block;
       content: "";
@@ -106,6 +170,10 @@
       left: -7px;
       background-image: url(../img/phone-alt.svg);
     }
+		&:hover{
+			opacity: .6;
+			transition: opacity 400ms ease,
+		}
   }
   &__mail{
     color: $top-head;
@@ -116,11 +184,17 @@
       content: "";
       position: absolute;
       width: 16px;
+			opacity: 1;
       height: 16px;
       top: 2px;
       left: -7px;
       background-image: url(../img/envelope.svg);
+			transition: opacity 400ms ease,
     }
+		&:hover{
+			opacity: .6;
+			transition: opacity 400ms ease,
+		}
   }
   &__search{
     display: flex;
@@ -129,6 +203,9 @@
 .users-info{
   display: flex;
   justify-content: space-between;
+	& p.users-info__name{
+		font-size: 14px;
+	}
   &__cart{
     padding-left: 45px;
     position: relative;

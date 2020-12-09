@@ -5,6 +5,11 @@
     font-size: 14px;
     font-weight: 400;
     padding-right: 10px;
+    transition: color 400ms ease;
+    &:hover{
+      color: $blue-color;
+      transition: color 400ms ease;
+    }
     &::after{
       content: "/";
       padding-left: 10px;

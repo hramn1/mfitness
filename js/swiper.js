@@ -1,7 +1,9 @@
-// // import Swiper JS
-// import Swiper from 'swiper';
-// // import Swiper styles
-// import '/../../node_modules/swiper/swiper-bundle.css';
-//
-// const swiper = new Swiper();
-
+var swiper = new Swiper('.swiper-container', {
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	pagination: {
+	el: '.swiper-pagination',
+	},
+});

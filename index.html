@@ -5,6 +5,7 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <title>MFITNESS</title>
 </head>
@@ -41,6 +42,7 @@
         <a class="bottom-head__phone" href="">+7 (495) 956-50-00</a>
       </section>
       <button class="bottom-head__catalog-menu">
+        <span class="bottom-head__menu-btn"></span>
         Каталог товаров
       </button>
       <div class="bottom-head__dropdown-menu">
@@ -280,7 +282,17 @@
 <main class="main">
   <div class="container">
     <section class="slider-block">
-      <img src="img/slide1.jpg" height="300" width="1416" alt="">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="img/slide1.jpg" height="300" width="1416" alt=""></div>
+          <div class="swiper-slide"><img src="img/slide1.jpg" height="300" width="1416" alt=""></div>
+          <div class="swiper-slide"><img src="img/slide1.jpg" height="300" width="1416" alt=""></div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+      </div>
     </section>
     <section class="sales-block">
       <ul class="sales-block__items">
@@ -985,15 +997,16 @@
       <div class="footer-social">
         <h2 class="footer-social__title">Дружите с нами в соцсетях!</h2>
         <ul class="footer-social__list">
-          <li class="footer-social__item footer-social__item--fb"><a href="">Фейсбук</a></li>
-          <li class="footer-social__item footer-social__item--inst"><a href="">Инстаграмм</a></li>
-          <li class="footer-social__item footer-social__item--youtube"><a href="">Ютуб</a></li>
+          <li class="footer-social__item footer-social__item--fb"><a href="https://www.facebook.com/MFitness.ltd/">Фейсбук</a></li>
+          <li class="footer-social__item footer-social__item--inst"><a href="https://www.instagram.com/mfitness_ru/">Инстаграмм</a></li>
+          <li class="footer-social__item footer-social__item--youtube"><a href="https://www.youtube.com/user/MFITNES/">Ютуб</a></li>
         </ul>
       </div>
       <section class="footer-copyright">© 2020 МФитнес. Все права защищены.</section>
     </section>
   </div>
 </footer>
+<script src="js/swiper-bundle.min.js"></script>
 <script src="js/swiper.js"></script>
 <script src="js/menu-head.js"></script>
 </body>

@@ -20,7 +20,7 @@
 		padding: 12px 10px 9px;
 		@include typography(14px, 400);
 		&:hover{
-			background-color: darken($blue-color, 20%);
+			background-color: darken($blue-color, 10%);
 		}
 	}
 }
@@ -43,7 +43,6 @@
 			justify-content: space-between;
 			color: $top-head;
 			transition: color 500ms;
-
 		}
 		& p{
 		 text-align: center;
@@ -90,9 +89,6 @@
 				color: $blue-color;
 				transition: color 500ms;
 			}
-      & .popular-catalog__price {
-        color: $top-head;
-      }
 		}
 		& p {
       text-align: center;
@@ -102,5 +98,6 @@
 	&__price{
 		text-align: center;
     @include typography(18px, 700);
+		color: $top-head;
 	}
 }
