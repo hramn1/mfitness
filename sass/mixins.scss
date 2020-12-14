@@ -3,7 +3,7 @@
 	flex-wrap: wrap;
 	justify-content: $justify;
 }
-@mixin typography($fz: 16px, $weight: 500, $style: normal){
+@mixin typography($fz: 16px, $weight: 400, $style: normal){
 	font-family: 'Roboto', 'Arial', sans-serif;
 	font-size: $fz;
 	font-weight: $weight;

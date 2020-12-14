@@ -5,6 +5,11 @@
 		margin: 0;
 		@include typography(30px, 700);
 	}
+  &__slider{
+    width: 700px;
+    position: relative;
+    display: flex;
+  }
 }
 .product-content{
 	grid-column: 1 / 3;
@@ -29,6 +34,7 @@
 		@include typography(12px, 400);
 		color: #666666;
 		text-align: center;
+    padding-bottom: 5px;
 		&:first-child{
 			text-align: left;
 		}
@@ -41,12 +47,108 @@
 		}
 	}
 	& tr td {
-		padding: 10px 0 10px 5px;
+		padding: 5px 0 5px 5px;
 	}
+  & tr td:first-child{
+    width: 35%;
+  }
+  & tr td:nth-child(2){
+    width: 15%;
+  }
+  & tr td:nth-child(3){
+    width: 30%;
+  }
+  //& tr td:last-child{
+  //  width: 150px;
+  //}
 
 }
 .add-cart-block{
 	&__bottom{
 		@include flexCase();
 	}
+}
+.goods-more-btn{
+  color: #333333;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 5px;
+  padding: 10px 35px 10px 12px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #c6c6c6;
+}
+.add-cart-block{
+  margin-top: 45px;
+  &__top{
+    color: #666666;
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+.cart-block{
+  &__quantity {
+    margin: 0;
+    align-self: center;
+    @include typography(24px, 400)
+  }
+  &__price{
+    margin: 0;
+    align-self: center;
+    @include typography(24px, 500)
+  }
+  &__add-btn{
+    @include btn();
+    color: $white;
+    padding: 15px 45px;
+    @include typography(18px, 500);
+  }
+}
+.product-content{
+  padding-top: 20px;
+  & ul {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+}
+.product-tabs{
+  &__tab{
+    background-color: transparent;
+    border:0;
+    color: #333333;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 80px;
+  }
+}
+.counter-goods{
+  width: 140px;
+  margin: auto;
+  display: flex;
+  & input{
+    width: 75px;
+    border: 1px solid #c6c6c6;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    box-shadow: none;
+    text-align: center;
+  }
+  &__minus{
+    width: 35px;
+    line-height: 35px;
+    border: 1px solid #c6c6c6;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-right: 0;
+  }
+  &__plus{
+    width: 35px;
+    line-height: 35px;
+    border: 1px solid #c6c6c6;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-left: 0;
+  }
 }

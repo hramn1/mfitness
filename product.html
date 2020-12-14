@@ -5,6 +5,7 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <title>MFITNESS</title>
 </head>
@@ -288,7 +289,27 @@
       <a class="breadcrumbs__item breadcrumbs__item--active" href="">Гимнастический коврик Airex Fitline 140</a>
     </nav>
     <div class="product-page">
-      <div class="product-page__slider"></div>
+      <div class="product-page__slider">
+        <div class="swiper-container gallery-top">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(./img/gallery-1.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/gallery-1.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/gallery-1.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/gallery-1.jpg)"></div>
+          </div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next swiper-button-white"></div>
+          <div class="swiper-button-prev swiper-button-white"></div>
+        </div>
+        <div class="swiper-container gallery-thumbs">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(./img/gal-thumb-1.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/gal-thumb-2.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/gal-thumb-3.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./img/gal-thumb-4.jpg)"></div>
+          </div>
+        </div>
+      </div>
       <div class="product-page__specific">
         <h1 class="product-page__title">Гимнастический коврик AIREX Fitline 140</h1>
         <div class="product-top">
@@ -310,10 +331,10 @@
               <td>4 620 ₽</td>
               <td>Товар на складе</td>
               <td>
-                <div>
-                  <a href="#">-</a>
-                  <label for="quantity"></label><input type="text" value="0">
-                  <a href="#">+</a>
+                <div class="counter-goods">
+                  <a class="counter-goods__minus" href="#">-</a>
+                  <label for="quantity-1"></label><input id="quantity-1" type="text" value="0">
+                  <a class="counter-goods__plus" href="#">+</a>
                 </div>
               </td>
             </tr>
@@ -322,10 +343,10 @@
               <td>4 620 ₽</td>
               <td>Товар на складе</td>
               <td>
-                <div>
-                  <a href="#">-</a>
-                  <label for="quantity"></label><input type="text" value="0">
-                  <a href="#">+</a>
+                <div class="counter-goods">
+                  <a class="counter-goods__minus" href="#">-</a>
+                  <label for="quantity-2"></label><input id="quantity-2" type="text" value="0">
+                  <a class="counter-goods__plus" href="#">+</a>
                 </div>
               </td>
             </tr>
@@ -334,10 +355,10 @@
               <td>4 620 ₽</td>
               <td>Товар на складе</td>
               <td>
-                <div>
-                  <a href="#">-</a>
-                  <label for="quantity"></label><input type="text" value="0">
-                  <a href="#">+</a>
+                <div class="counter-goods">
+                  <a class="counter-goods__minus" href="#">-</a>
+                  <label for="quantity-3"></label><input id="quantity-3" type="text" value="0">
+                  <a class="counter-goods__plus" href="#">+</a>
                 </div>
               </td>
             </tr>
@@ -345,19 +366,19 @@
         </table>
         <button class="goods-more-btn">Показать еще варианты исполнения</button>
         <div class="add-cart-block">
-          <p>Промежуточный итог:</p>
-          <div class="add-cart-block__bottom">
-            <p>1 шт.</p>
-            <p>4 620 ₽</p>
-            <button>Добавить в корзину</button>
+          <p class="add-cart-block__top">Промежуточный итог:</p>
+          <div class="add-cart-block__bottom cart-block">
+            <p class="cart-block__quantity">1 шт.</p>
+            <p class="cart-block__price">4 620 ₽</p>
+            <button class="cart-block__add-btn">Добавить в корзину</button>
           </div>
         </div>
       </div>
       <section class="product-content">
         <div class="product-tabs">
-          <button>Описание</button>
-          <button>Характеристики</button>
-          <button>О бренде</button>
+          <button class="product-tabs__tab">Описание</button>
+          <button class="product-tabs__tab">Характеристики</button>
+          <button class="product-tabs__tab">О бренде</button>
         <div>
             <p>Благодаря привлекательной цене, гимнастические коврики AIREX Fitline представляют собой классическую
               модель начального уровня для занятий дома.
@@ -379,14 +400,13 @@
               <li> Износостойкий материал сохраняет все свои качества много лет даже при ежедневных тренировках
               </li>
               <li> Универсальный дизайн подойдет к любому интерьеру
-
               </li>
             </ul>
 
             <p>Также рекомендуем посмотреть обзор ковриков Airex на нашем YouTube канале:
             </p>
           </div>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/N6WXG56AO88" frameborder="0"
+          <iframe width="502" height="289" src="https://www.youtube.com/embed/N6WXG56AO88" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen></iframe>
         </div>
@@ -534,8 +554,8 @@
     </section>
   </div>
 </footer>
+<script src="js/swiper-bundle.min.js"></script>
 <script src="js/swiper.js"></script>
 <script src="js/menu-head.js"></script>
-
 </body>
 </html>
