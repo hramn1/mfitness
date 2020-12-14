@@ -1,12 +1,12 @@
-// var swiper = new Swiper('.swiper-container', {
-// 	navigation: {
-// 		nextEl: '.swiper-button-next',
-// 		prevEl: '.swiper-button-prev',
-// 	},
-// 	pagination: {
-// 	el: '.swiper-pagination',
-// 	},
-// });
+var swiperBanner = new Swiper('.slider-block .swiper-container', {
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	pagination: {
+	el: '.swiper-pagination',
+	},
+});
 
 var galleryThumbs = new Swiper('.gallery-thumbs', {
   spaceBetween: 10,

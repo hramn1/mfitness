@@ -92,3 +92,28 @@ a{
 	padding: 0 2px;
 	margin: 0 auto;
 }
+@media (max-width: $medium-desktop) {
+  .container {
+    width: 1260px;
+  }
+}
+@media (max-width: $small-desktop) {
+  .container {
+    width: 1000px;
+  }
+}
+@media (max-width: $large-tablet) {
+  .container {
+    width: 680px;
+  }
+}
+@media (max-width: $small-tablet) {
+  .container {
+    width: 480px;
+  }
+}
+@media (max-width: $mobile) {
+  .container {
+    width: 324px;
+  }
+}
