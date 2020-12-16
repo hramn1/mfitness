@@ -42,6 +42,7 @@
   border: 0;
   text-decoration: underline;
   cursor: pointer;
+	@include typography(14px, 400);
 }
 .bottom-head{
   display: grid;
@@ -52,6 +53,11 @@
   justify-content: space-between;
   grid-template-columns: 216px 816px auto;
   row-gap: 12px;
+	&__text{
+		&--mobile{
+			display: none;
+		}
+	}
   &__dropdown-menu{
     position: absolute;
     background-color: #fff;
@@ -112,11 +118,6 @@
 			}
 
 		}
-    // &::before{
-    //   @include pseudoEl(15px, 15px);
-    //   background-image: url(../img/menu_closed.svg);
-    //   left: 13px;
-    // }
   }
   &__logo{
     margin-top: 12px;
@@ -324,4 +325,96 @@
 			background-color: darken($blue-color, 10%);
 		}
   }
+}
+.top-links-mobile{
+	display: none;
+}
+.mobile-open-menu-btn{
+	display: none;
+}
+// $medium-desktop: 1440px;
+// $small-desktop:  1280px;
+// $large-tablet: 1025px;
+// $small-tablet: 700px;
+// $mobile:  500px;
+@media (max-width: $mobile) {
+  .top-links {
+		display: none;
+  }
+	.top-head__content{
+		margin: 0
+	}
+	.top-links-mobile{
+		display: block;
+		&__link{
+			color: #333333;
+			display: block;
+			font-size: 14px;
+			font-weight: 500;
+			background-color: #fff;
+			padding: 6px 35px 6px 10px;
+		}
+	}
+	.top-links-mobile-dropdown{
+		display: none;
+	}
+	.bottom-head{
+		grid-template-areas: "L L CA BTN"
+												"CM S S S";
+		grid-template-columns: 90px auto auto auto;
+		&__menu{
+			display: none;
+		}
+		&__contact{
+			display: none;
+		}
+		&__catalog-menu{
+			grid-area: CM;
+			margin-right: 10px;
+		}
+		&__search{
+			grid-area: S;
+		}
+		&__logo{
+			& img{
+				width: 150px;
+				height: 100%;
+			}
+		}
+		&__text{
+			display: none;
+			&--mobile{
+				display: block;
+				@include typography(12px, 700);
+			}
+		}
+	}
+	.mobile-open-menu-btn{
+		display: block;
+		grid-area: BTN;
+	}
+	.users-info{
+		grid-area: CA;
+		margin-top: 12px;
+		& p {
+			display: none;
+		}
+	}
+	.search-form__btn{
+		font-size: 0;
+		padding-left: 17px;
+		padding-right: 17px;
+	}
+	.search-form__input{
+		font-size: 12px;
+		padding: 7px 10px;
+	}
+}
+.mobile-open-menu-btn{
+	margin-top: 12px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	background-image: url();
 }

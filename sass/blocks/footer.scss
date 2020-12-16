@@ -105,3 +105,13 @@
   margin-top: 40px;
   @include typography(16px, 400);
 }
+// $medium-desktop: 1440px;
+// $small-desktop:  1280px;
+// $large-tablet: 1025px;
+// $small-tablet: 700px;
+// $mobile:  500px;
+@media (max-width: $mobile) {
+  .footer-content {
+		grid-template-columns: auto auto auto;
+  }
+}

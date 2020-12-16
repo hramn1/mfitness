@@ -101,3 +101,32 @@
 		color: $top-head;
 	}
 }
+// $medium-desktop: 1440px;
+// $small-desktop:  1280px;
+// $large-tablet: 1025px;
+// $small-tablet: 700px;
+// $mobile:  500px;
+@media (max-width: $mobile) {
+	.sales-catalog{
+		&__item{
+			width: 150px;
+			& img{
+				height: 100%;
+			}
+			& p {
+				font-size: 11px;
+			}
+		}
+	}
+	.sale-price__item--new{
+		font-size: 12px;
+		& span{
+			font-size: 14px;
+		}
+	}
+	.sales-goods{
+		&__title{
+			font-size: 18px;
+		}
+	}
+}
