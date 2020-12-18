@@ -9,7 +9,7 @@ var swiperBanner = new Swiper('.slider-block .swiper-container', {
 });
 
 var galleryThumbs = new Swiper('.gallery-thumbs', {
-  spaceBetween: 10,
+  spaceBetween: 20,
   slidesPerView: 4,
   freeMode: true,
   watchSlidesVisibility: true,
@@ -25,4 +25,9 @@ var galleryTop = new Swiper('.gallery-top', {
   thumbs: {
     swiper: galleryThumbs
   }
+});
+var swiperSaleMobile = new Swiper('.sales-block-mobile .swiper-container', {
+	pagination: {
+		el: '.swiper-pagination',
+	},
 });

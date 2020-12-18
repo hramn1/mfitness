@@ -297,9 +297,20 @@
     <section class="slider-block">
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="img/slide1.jpg" height="300" width="1416" alt=""></div>
-          <div class="swiper-slide"><img src="img/slide1.jpg" height="300" width="1416" alt=""></div>
-          <div class="swiper-slide"><img src="img/slide1.jpg" height="300" width="1416" alt=""></div>
+          <div class="swiper-slide">
+            <picture>
+               <source srcset="img/banner-mobile.jpg" width="324" height="150"  media="(max-width: 500px)">
+              <img src="img/slide1.jpg"  alt="">
+            </picture>
+          </div>
+          <div class="swiper-slide">            <picture>
+                         <source srcset="img/banner-mobile.jpg" width="324" height="150"  media="(max-width: 500px)">
+                        <img src="img/slide1.jpg"  alt="">
+                      </picture></div>
+          <div class="swiper-slide">            <picture>
+                         <source srcset="img/banner-mobile.jpg" width="324" height="150"  media="(max-width: 500px)">
+                        <img src="img/slide1.jpg"  alt="">
+                      </picture></div>
         </div>
         <!-- Add Arrows -->
         <div class="swiper-button-next"></div>
@@ -332,6 +343,35 @@
         </li>
       </ul>
     </section>
+    <div class="sales-block-mobile">
+      <div class="swiper-container">
+        <ul class="swiper-wrapper sales-block-mobile__items">
+          <li class="swiper-slide sales-block-mobile__item sales-block-mobile__item--green">
+            <img class="sales-block-mobile__img" width="184" height="104" src="img/sale-carpet.png" alt="">
+            <p class="sales-block-mobile__text">Скидки до<br>
+              <span>25%</span><br>
+              Коврики для йоги
+            </p>
+          </li>
+          <li class="swiper-slide sales-block-mobile__item sales-block-mobile__item--muar">
+            <img class="sales-block-mobile__img" width="184" height="104" src="img/sale-carpet.png" alt="">
+            <p class="sales-block-mobile__text">Скидки до<br>
+              <span>25%</span><br>
+              Коврики для йоги
+            </p>
+          </li>
+          <li class="swiper-slide sales-block-mobile__item sales-block-mobile__item--violet">
+            <img class="sales-block-mobile__img" width="184" height="104" src="img/sale-carpet.png" alt="">
+            <p class="sales-block-mobile__text">Скидки до<br>
+              <span>25%</span><br>
+              Коврики для йоги
+            </p>
+          </li>
+        </ul>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
     <section class="sales-goods">
       <h2 class="sales-goods__title">Страшные скидки в ноябре!</h2>
 

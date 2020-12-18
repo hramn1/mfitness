@@ -24,3 +24,23 @@
     }
   }
 }
+// $medium-desktop: 1440px;
+// $small-desktop:  1280px;
+// $large-tablet: 1025px;
+// $small-tablet: 700px;
+// $mobile:  500px;
+@media (max-width: $mobile) {
+  .popular-brands{
+    &__title{
+      @include typography(18px,700);
+    }
+    &__list{
+    }
+    &__item{
+      flex-basis: 45%;
+      & img{
+        height: 100%;
+      }
+    }
+  }
+}

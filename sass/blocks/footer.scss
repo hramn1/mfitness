@@ -113,5 +113,25 @@
 @media (max-width: $mobile) {
   .footer-content {
 		grid-template-columns: auto auto auto;
+    grid-gap: 12px;
   }
+  .footer-menu{
+    display: none;
+  }
+  .footer-catalog{
+    display: none;
+  }
+  .main-footer{
+    padding-top: 0;
+   & .footer-social{
+    &__title{
+      font-size: 12px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+  }
+}
+.footer-copyright{
+  margin-top: 0;
+}
 }

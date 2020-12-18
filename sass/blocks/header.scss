@@ -365,12 +365,14 @@
 		&__menu{
 			display: none;
 		}
+
 		&__contact{
 			display: none;
 		}
 		&__catalog-menu{
 			grid-area: CM;
 			margin-right: 10px;
+			padding-left: 30px;
 		}
 		&__search{
 			grid-area: S;
@@ -409,12 +411,35 @@
 		font-size: 12px;
 		padding: 7px 10px;
 	}
+	.mobile-open-menu-btn{
+		margin-top: 12px;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		width: 34px;
+		height: 32px;
+		padding: 0;
+		background-image: url(../img/btn-mobile.png);
+	}
+	.bottom-head__catalog-menu .bottom-head__menu-btn{
+		width: 14px;
+		height: 2px;
+		top: 14px;
+		left: 7px;
+		&::before{
+			width: 14px;
+			height: 2px;
+			top: -5px;
+		}
+		&::after{
+			width: 14px;
+			height: 2px;
+			top: 5px;
+			}
+		}
+	.bottom-head__catalog-menu .bottom-head__menu-btn--closed{
+		&::after{
+		transform: rotate(-45deg) translateX(-1px) translateY(-1px);
+			}
 }
-.mobile-open-menu-btn{
-	margin-top: 12px;
-	background-color: transparent;
-	border: none;
-	cursor: pointer;
-	padding: 0;
-	background-image: url();
 }

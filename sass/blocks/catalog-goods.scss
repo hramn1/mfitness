@@ -118,6 +118,22 @@
 			}
 		}
 	}
+	.popular-goods{
+		&__title{
+			font-size: 18px;
+		}
+	}
+	.popular-catalog{
+		&__item{
+			width: 150px;
+			& img{
+				height: 100%;
+			}
+			& p {
+				font-size: 11px;
+			}
+		}
+	}
 	.sale-price__item--new{
 		font-size: 12px;
 		& span{
