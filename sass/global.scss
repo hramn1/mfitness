@@ -78,6 +78,14 @@ body{
 	@include typography();
   color: $top-head;
 }
+button{
+  @include typography();
+  color: $top-head;
+}
+input{
+  @include typography();
+  color: $top-head;
+}
 img{
 	max-width: 100%;
 }
