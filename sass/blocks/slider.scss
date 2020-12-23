@@ -104,4 +104,38 @@
 			padding: 10px;
 		}
 	}
+	.product-page {
+	  & .swiper-container {
+	    width: 100%;
+
+	    margin-left: auto;
+	    margin-right: auto;
+	  }
+	  & .swiper-slide {
+	    background-size: cover;
+	    background-position: center;
+	  }
+	  & .gallery-top {
+	    width: 100%;
+	    order: 1;
+			height: 80%;
+	  }
+	  & .gallery-thumbs {
+	    width: 100%;
+			height: 20%;
+	    order: 2;
+	    align-self: center;
+	    box-sizing: border-box;
+	    padding: 10px 0;
+	  }
+	  & .gallery-thumbs .swiper-slide {
+	    width: 100%;
+	    opacity: 0.4;
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	  }
+	  & .gallery-thumbs .swiper-slide-thumb-active {
+	    opacity: 1;
+	  }
+	}
 }

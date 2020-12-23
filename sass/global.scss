@@ -86,7 +86,7 @@ input{
   @include typography();
   color: $top-head;
 }
-img{
+img, iframe{
 	max-width: 100%;
 }
 a{

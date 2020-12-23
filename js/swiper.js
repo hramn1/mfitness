@@ -14,7 +14,12 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
   freeMode: true,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
-  direction: "vertical",
+  direction: "horizontal",
+	breakpoints: {
+		700:{
+			direction: "vertical",
+		}
+	}
 });
 var galleryTop = new Swiper('.gallery-top', {
   spaceBetween: 10,

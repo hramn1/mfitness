@@ -59,3 +59,17 @@
     }
   }
 }
+// $medium-desktop: 1440px;
+// $small-desktop:  1280px;
+// $large-tablet: 1025px;
+// $small-tablet: 700px;
+// $mobile:  500px;
+@media (max-width: $mobile) {
+	.catalog-content	{
+		grid-template-columns: 1fr;
+	}
+	.catalog-menu{
+		display: none;
+	}
+
+}

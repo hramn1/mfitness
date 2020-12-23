@@ -24,3 +24,16 @@
   }
 
 }
+@media (max-width: $mobile) {
+  .breadcrumbs{
+    &__item{
+      display: none;
+      &:nth-last-child(1){
+        display: inline;
+      }
+      &:nth-last-child(2){
+        display: inline;
+      }
+    }
+  }
+}
