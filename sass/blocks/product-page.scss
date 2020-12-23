@@ -74,6 +74,15 @@
   background-color: transparent;
   border-radius: 5px;
   border: 1px solid #c6c6c6;
+	position: relative;
+	&::after {
+		position: absolute;
+		@include pseudoEl(17px, 19px);
+		background-image: url(../img/chevron-down.svg);
+		right: 8px;
+		top: 9px;
+
+	}
 }
 .add-cart-block{
   margin-top: 45px;
@@ -181,6 +190,10 @@
 	.product-content{
 		grid-column: 1/1;
 		font-size: 12px;
+		& iframe{
+			width: 320px;
+			height: 185px;
+		}
 	}
 	.product-top{
 		border-bottom: 0;
@@ -234,5 +247,22 @@
 	margin: 10px auto;
 	display: block;
 	width: 295px;
+}
+.add-cart-block{
+	margin-top: 10px;
+}
+.cart-block{
+	&__add-btn{
+		margin: 20px auto;
+	}
+}
+.product-tabs{
+	&__tab{
+		font-size: 16px;
+		margin-right: 24px;
+		&:nth-child(3){
+			margin-right: 0;
+		}
+	}
 }
 }
