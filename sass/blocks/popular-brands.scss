@@ -29,7 +29,7 @@
 // $large-tablet: 1025px;
 // $small-tablet: 700px;
 // $mobile:  500px;
-@media (max-width: $mobile) {
+@media (max-width: $small-tablet) {
   .popular-brands{
     &__title{
       @include typography(18px,700);

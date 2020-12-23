@@ -72,7 +72,7 @@
 // $large-tablet: 1025px;
 // $small-tablet: 700px;
 // $mobile:  500px;
-@media (max-width: $mobile) {
+@media (max-width: $small-tablet) {
 	.sales-block{
 		display: none;
 	}

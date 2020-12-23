@@ -110,7 +110,7 @@
 // $large-tablet: 1025px;
 // $small-tablet: 700px;
 // $mobile:  500px;
-@media (max-width: $mobile) {
+@media (max-width: $small-tablet) {
   .footer-content {
 		grid-template-columns: auto auto auto;
     grid-gap: 12px;

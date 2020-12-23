@@ -337,7 +337,7 @@
 // $large-tablet: 1025px;
 // $small-tablet: 700px;
 // $mobile:  500px;
-@media (max-width: $mobile) {
+@media (max-width: $small-tablet) {
   .top-links {
 		display: none;
   }
@@ -406,6 +406,11 @@
 		font-size: 0;
 		padding-left: 17px;
 		padding-right: 17px;
+		background-image: url(../img/search.svg);
+		background-repeat: no-repeat;
+		background-size: 50%;
+		background-position: 50% 50%;
+
 	}
 	.search-form__input{
 		font-size: 12px;

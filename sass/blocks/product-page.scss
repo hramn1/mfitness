@@ -77,10 +77,12 @@
 	position: relative;
 	&::after {
 		position: absolute;
-		@include pseudoEl(17px, 19px);
+		@include pseudoEl(15px, 17px);
 		background-image: url(../img/chevron-down.svg);
-		right: 8px;
+		right: 9px;
+		background-repeat: no-repeat;
 		top: 9px;
+		opacity: 0.8
 
 	}
 }
@@ -160,6 +162,7 @@
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
     border-right: 0;
+		color: $top-head;
   }
   &__plus{
     width: 35px;
@@ -168,6 +171,7 @@
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
     border-left: 0;
+		color: $top-head;
   }
 }
 // $medium-desktop: 1440px;
@@ -175,9 +179,9 @@
 // $large-tablet: 1025px;
 // $small-tablet: 700px;
 // $mobile:  500px;
-@media (max-width: $mobile) {
+@media (max-width: $small-tablet) {
 	.product-page{
-		grid-template-columns: 320px;
+		grid-template-columns: 460px;
 		&__slider{
 			width: 100%;
 			flex-wrap: wrap;
@@ -265,4 +269,9 @@
 		}
 	}
 }
+}
+@media (max-width: $mobile) {
+	.product-page{
+		grid-template-columns: 320px;
+	}
 }

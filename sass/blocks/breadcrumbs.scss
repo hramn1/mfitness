@@ -24,7 +24,7 @@
   }
 
 }
-@media (max-width: $mobile) {
+@media (max-width: $small-tablet) {
   .breadcrumbs{
     &__item{
       display: none;
