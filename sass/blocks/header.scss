@@ -352,13 +352,23 @@
 // $small-desktop:  1280px;
 @media (max-width: $small-desktop) {
   .bottom-head{
+		grid-template-columns: auto  auto auto auto;
+		grid-template-areas: "L CA S U"
+												"CM CM CM UI";
 	&__mail{
 		display: none;
 	}
 	&__logo{
 		& img{
 			height: 100%;
+			grid-area: L;
 		}
+	}
+	&__catalog-menu{
+		grid-area: CA;
+	}
+	&__user{
+		grid-area: U;
 	}
 	.users-info__cart{
 		& p {
@@ -370,6 +380,15 @@
 			display: none;
 		}
 	}
+	&__menu{
+		grid-area: CM;
+	}
+	&__contact{
+		grid-area: UI
+	}
+	&__search{
+		grid-area: S;
+	}
 }
 }
 // $large-tablet: 1023px;
@@ -378,6 +397,10 @@
     grid-template-columns:  auto auto auto;
 
   }
+	&__logo{
+	}
+
+
 }
 
 // $small-tablet: 700px;
