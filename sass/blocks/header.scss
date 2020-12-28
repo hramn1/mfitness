@@ -342,8 +342,36 @@
       }
     }
   }
+	.dropdown-menu{
+		&__item{
+			width: 290px;
+			margin-right: 20px;
+		}
+	}
 }
 // $small-desktop:  1280px;
+@media (max-width: $small-desktop) {
+  .bottom-head{
+	&__mail{
+		display: none;
+	}
+	&__logo{
+		& img{
+			height: 100%;
+		}
+	}
+	.users-info__cart{
+		& p {
+			display: none;
+		}
+	}
+	.users-info__lk{
+		& p {
+			display: none;
+		}
+	}
+}
+}
 // $large-tablet: 1023px;
 @media (max-width: $large-tablet) {
   .bottom-head{

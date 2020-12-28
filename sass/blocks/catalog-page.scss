@@ -60,6 +60,11 @@
   }
 }
 // $medium-desktop: 1440px;
+@media (max-width: $medium-desktop) {
+	.catalog-content	{
+		grid-template-columns: 1fr 960px;
+	}
+}
 // $small-desktop:  1280px;
 // $large-tablet: 1025px;
 // $small-tablet: 700px;

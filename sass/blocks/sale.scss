@@ -68,6 +68,13 @@
 	}
 }
 // $medium-desktop: 1440px;
+@media (max-width: $medium-desktop) {
+	.sales-block{
+		&__text{
+			font-size: 16px;
+		}
+	}
+}
 // $small-desktop:  1280px;
 // $large-tablet: 1025px;
 // $small-tablet: 700px;
