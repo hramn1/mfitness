@@ -107,6 +107,17 @@
 }
 // $medium-desktop: 1440px;
 // $small-desktop:  1280px;
+@media (max-width: $small-desktop) {
+  .footer-content {
+		grid-template-columns: 200px 500px auto;
+    grid-gap: 20px;
+  }
+  h2.footer-social{
+    &__title{
+      font-size: 16px;
+    }
+  }
+}
 // $large-tablet: 1025px;
 // $small-tablet: 700px;
 // $mobile:  500px;
