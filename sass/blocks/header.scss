@@ -397,6 +397,14 @@
 			font-weight: 500;
 			background-color: #fff;
 			padding: 6px 35px 6px 10px;
+			position: relative;
+			&::after{
+				@include pseudoEl(11px, 16px);
+				top: 3px;
+				right: 15px;
+				background-image: url(../img/sort-down-solid.svg);
+				background-repeat: no-repeat;
+			}
 		}
 	}
 	.top-links-mobile-dropdown{
