@@ -66,6 +66,11 @@
 	}
 }
 // $small-desktop:  1280px;
+@media (max-width: $small-desktop) {
+	.catalog-content	{
+		grid-template-columns: 1fr 720px;
+	}
+}
 // $large-tablet: 1025px;
 // $small-tablet: 700px;
 // $mobile:  500px;

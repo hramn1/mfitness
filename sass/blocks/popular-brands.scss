@@ -26,7 +26,17 @@
 }
 // $medium-desktop: 1440px;
 // $small-desktop:  1280px;
-// $large-tablet: 1025px;
+@media (max-width:  $small-desktop) {
+  .popular-brands{
+    &__item{
+      flex-basis: 150px;
+      & img{
+        height: 100%;
+      }
+    }
+  }
+}
+// $large-tablet: 1023px;
 // $small-tablet: 700px;
 // $mobile:  500px;
 @media (max-width: $small-tablet) {
