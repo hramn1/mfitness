@@ -355,13 +355,16 @@
 		grid-template-columns: auto  auto auto auto;
 		grid-template-areas: "L CA S U"
 												"CM CM CM UI";
+												padding-top: 24px;
 	&__mail{
 		display: none;
 	}
 	&__logo{
+		margin-top: 0;
 		& img{
 			height: 100%;
 			grid-area: L;
+			width: 168px;
 		}
 	}
 	&__catalog-menu{
@@ -395,12 +398,13 @@
 @media (max-width: $large-tablet) {
   .bottom-head{
     grid-template-columns:  auto auto auto;
-
-  }
-	&__logo{
+		&__logo{
+			& img{
+				width: 168px;
+				height: auto;
+			}
+		}
 	}
-
-
 }
 
 // $small-tablet: 700px;
