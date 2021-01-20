@@ -352,12 +352,18 @@
 // $small-desktop:  1280px;
 @media (max-width: $small-desktop) {
   .bottom-head{
-		grid-template-columns: auto  auto auto auto;
+		grid-template-columns: auto  auto 480px auto;
 		grid-template-areas: "L CA S U"
 												"CM CM CM UI";
 												padding-top: 24px;
 	&__mail{
 		display: none;
+	}
+	&__text{
+		display: none;
+		&--mobile{
+			display: block;
+		}
 	}
 	&__logo{
 		margin-top: 0;
@@ -372,6 +378,8 @@
 	}
 	&__user{
 		grid-area: U;
+		width: 150px;
+		margin-left: auto;
 	}
 	.users-info__cart{
 		& p {
@@ -393,6 +401,29 @@
 		grid-area: S;
 	}
 }
+.users-info__cart{
+	&::before{
+		width: 27px;
+		height: 25px;
+		left: 0;
+		background-size: contain;
+	}
+}
+.users-info__lk{
+	&::before{
+		width: 25px;
+		height: 25px;
+		background-size: contain;
+	}
+}
+	.bottom-head .users-info__cart .users-info__first{
+			display: block;
+			font-size: 12px;
+			font-weight: 400;
+			position: absolute;
+			top: 28px;
+			left: -5px;
+	}
 }
 // $large-tablet: 1023px;
 @media (max-width: $large-tablet) {
