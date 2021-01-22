@@ -115,13 +115,20 @@
   h2.footer-social{
     &__title{
       font-size: 16px;
+      text-align: right;
+    }
+
+  }
+  .footer-social{
+    &__list{
+      justify-content: flex-end;
     }
   }
 }
 // $large-tablet: 1025px;
 // $small-tablet: 700px;
 // $mobile:  500px;
-@media (max-width: $small-tablet) {
+@media (max-width: $large-tablet) {
   .footer-content {
 		grid-template-columns: auto auto auto;
     grid-gap: 12px;
@@ -144,5 +151,16 @@
 }
 .footer-copyright{
   margin-top: 0;
+}
+h2.footer-social{
+  &__title{
+    text-align: left;
+  }
+
+}
+.footer-social{
+  &__list{
+    justify-content: flex-start;
+  }
 }
 }

@@ -96,6 +96,25 @@
 	}
 }
 // $large-tablet: 1025px;
+@media(max-width: $large-tablet){
+	.sales-block__img {
+		height: auto;
+		width: 45%;
+	}
+	.sales-block{
+		&__text{
+			font-size: 12px;
+			font-weight: 500;
+			& span{
+				font-size: 18px;
+			}
+		}
+			&__item{
+				padding: 10px 10px;
+				flex-basis: 200px;
+			}
+	}
+}
 // $small-tablet: 700px;
 // $mobile:  500px;
 @media (max-width: $small-tablet) {

@@ -29,6 +29,13 @@
     }
   }
 }
+@media(max-width: $large-tablet){
+  .catalog-main-page{
+    &__item{
+    width: 200px;
+    }
+  }
+}
 @media (max-width: $small-tablet) {
   .catalog-main-page{
 

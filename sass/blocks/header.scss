@@ -359,6 +359,12 @@
 	&__mail{
 		display: none;
 	}
+	&__dropdown-menu{
+		&--show{
+			height: 900px;
+			top: 80px;
+		}
+	}
 	&__text{
 		display: none;
 		&--mobile{
@@ -393,6 +399,7 @@
 	}
 	&__menu{
 		grid-area: CM;
+		justify-content: space-around;
 	}
 	&__contact{
 		grid-area: UI
@@ -400,6 +407,12 @@
 	&__search{
 		grid-area: S;
 	}
+}
+.cart-icon{
+	left: 18px;
+}
+.lk-icon{
+	left: 16px
 }
 .users-info__cart{
 	&::before{
@@ -424,17 +437,51 @@
 			top: 28px;
 			left: -5px;
 	}
+	.bottom-head .users-info__lk	.users-info__name{
+		display: block;
+		font-size: 12px;
+		font-weight: 400;
+		position: absolute;
+		top: 28px;
+		left: -20px;
+	}
 }
 // $large-tablet: 1023px;
 @media (max-width: $large-tablet) {
   .bottom-head{
     grid-template-columns:  auto auto auto;
+		font-size: 12px;
+		&__dropdown-menu{
+			height: 1200px;
+			top:70px;
+		}
 		&__logo{
 			& img{
-				width: 168px;
+				width: 128px;
 				height: auto;
 			}
 		}
+		&__user{
+			width: auto;
+		}
+	}
+	.bottom-head__menu a{
+		font-size: 11px;
+	}
+	.bottom-head__catalog-menu{
+		font-size: 12px;
+	}
+	.search-form__btn{
+		font-size: 12px;
+	}
+	.search-form__input{
+		font-size: 12px;
+	}
+	.bottom-head .users-info__cart .users-info__first, .bottom-head .users-info__lk .users-info__name{
+		display: none;
+	}
+	.bottom-head__catalog-menu .bottom-head__menu-btn{
+		top: 15px;
 	}
 }
 
