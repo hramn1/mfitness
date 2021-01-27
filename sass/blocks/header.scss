@@ -58,6 +58,9 @@
 			display: none;
 		}
 	}
+	&__menu-mobile{
+		display: none;
+	}
   &__dropdown-menu{
     position: absolute;
     background-color: #fff;
@@ -495,6 +498,7 @@
 	}
 	.top-links-mobile{
 		display: block;
+		position: relative;
 		&__link{
 			color: #333333;
 			display: block;
@@ -503,6 +507,8 @@
 			background-color: #fff;
 			padding: 6px 35px 6px 10px;
 			position: relative;
+			border-right:  1px solid #333333;
+			border-left: 1px solid #333333;
 			&::after{
 				@include pseudoEl(11px, 16px);
 				top: 3px;
@@ -514,6 +520,30 @@
 	}
 	.top-links-mobile-dropdown{
 		display: none;
+		position: absolute;
+		&--show{
+			display: block;
+			background-color: #fff;
+			z-index: 1;
+			width: 100%;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+			border: 1px solid #333333;
+			border-top: none;
+			padding: 8px 13px 5px;
+		}
+		&__link{
+			display: block;
+			padding: 7px 0;
+			color: $top-head;
+			border-bottom: 1px solid #c6c6c6;
+			&:last-child{
+				border-bottom: none;
+			}
+			&:first-child{
+				border-top: 1px solid #c6c6c6;
+			}
+		}
 	}
 	.bottom-head{
 		grid-template-areas: "L L CA BTN"
@@ -521,6 +551,12 @@
 		grid-template-columns: 90px auto auto auto;
 		&__menu{
 			display: none;
+			&--show{
+				display: block;
+				position: absolute;
+				width: 100%;
+				z-index: 5
+			}
 		}
 
 		&__contact{
