@@ -555,7 +555,21 @@
 				display: block;
 				position: absolute;
 				width: 100%;
-				z-index: 5
+				z-index: 5;
+				grid-area: unset;
+				top: 80px;
+				background-color: #fff;
+				padding: 10px 20px;
+				& a {
+					display: block;
+					font-size: 16px;
+					color: $top-head;
+					padding: 20px 0;
+					border-bottom: 1px solid #c6c6c6;
+				}
+			}
+			&-mobile{
+				display: block;
 			}
 		}
 
@@ -593,6 +607,14 @@
 		margin-top: 12px;
 		& p {
 			display: none;
+		}
+		&__cart::before{
+			width: 35px;
+			height: 33px;
+		}
+		&__lk::before{
+			width: 34px;
+			height: 34px;
 		}
 	}
 	.search-form__btn{
