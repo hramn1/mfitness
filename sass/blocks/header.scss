@@ -493,6 +493,24 @@
   .top-links {
 		display: none;
   }
+	.dropdown-menu{
+		&__img{
+			width: 45px;
+			height: 45px;
+		}
+		&__list{
+			display: none;
+		}
+		&__content{
+			margin-left: 30px;
+		}
+		&__title{
+			font-size: 16px;
+			font-weight: 700;
+			margin-top: 7px;
+			cursor: pointer;
+		}
+	}
 	.top-head__content{
 		margin: 0
 	}
@@ -549,6 +567,9 @@
 		grid-template-areas: "L L CA BTN"
 												"CM S S S";
 		grid-template-columns: 90px auto auto auto;
+		&__dropdown-menu{
+			top: 130px;
+		}
 		&__menu{
 			display: none;
 			&--show{
