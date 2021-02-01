@@ -74,7 +74,7 @@
 // $large-tablet: 1025px;
 // $small-tablet: 700px;
 // $mobile:  500px;
-@media (max-width: $small-tablet) {
+@media (max-width: $large-tablet) {
 	.catalog-content	{
 		grid-template-columns: 1fr;
 	}

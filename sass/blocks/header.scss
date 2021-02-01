@@ -572,6 +572,8 @@
 		}
 		&__menu{
 			display: none;
+      border-top: 1px solid #232323;
+      border-bottom: 1px solid #232323;
 			&--show{
 				display: block;
 				position: absolute;
@@ -587,10 +589,22 @@
 					color: $top-head;
 					padding: 20px 0;
 					border-bottom: 1px solid #c6c6c6;
+          transition: 500ms;
+          &:hover{
+            color: $blue-color;
+            transition: 500ms;
+          }
+          &::after{
+            display: none;
+          }
 				}
 			}
 			&-mobile{
 				display: block;
+        padding-bottom: 20px;
+        & a {
+          border-bottom: 0;
+        }
 			}
 		}
 
@@ -683,5 +697,20 @@
 		transform: rotate(-45deg) translateX(-1px) translateY(-1px);
 			}
 }
+ .bottom-head .bottom-head__mail{
+   padding-left: 30px;
+   &::before{
+     top: 20px;
+     left: 5px;
+   }
+ }
+  .bottom-head .bottom-head__phone{
+    padding-left: 30px;
+    margin-left: 0;
+    &::before{
+      top: 20px;
+      left: 5px;
+    }
+  }
 }
 // $mobile:  500px;

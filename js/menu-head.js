@@ -2,6 +2,8 @@
   const btnOpenMenu = document.querySelector(`.bottom-head__catalog-menu`);
   const btnOpenTopMenu = document.querySelector(`.top-links-mobile__link`);
   const btnMainMenuOpen = document.querySelector(`.mobile-open-menu-btn`);
+  const catalogBtn = document.querySelectorAll('.catalog-main-page__title');
+  const catalogList = document.querySelectorAll('.catalog-main-page__list');
   const openedMenu = (evt)=>{
     const dropDownMenu = document.querySelector(`.bottom-head__dropdown-menu`);
     const iconMenu = document.querySelector(`.bottom-head__menu-btn`);
@@ -21,7 +23,13 @@
     const mainMenuMobile = document.querySelector(`.bottom-head__menu`);
     mainMenuMobile.classList.toggle('bottom-head__menu--show')
   }
+  const openedCatalog = (evt) => {
+   evt.target.nextElementSibling.classList.toggle('catalog-main-page__list--show');
+  }
   btnOpenTopMenu.addEventListener(`click`, openedTopMenu);
   btnOpenMenu.addEventListener('click', openedMenu);
   btnMainMenuOpen.addEventListener('click', openedMainMenu);
+  for(let i = 0; i < catalogBtn.length; i++){
+    catalogBtn[i].addEventListener('click', openedCatalog);
+  }
 })();
