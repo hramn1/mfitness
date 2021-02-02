@@ -31,8 +31,13 @@ var galleryTop = new Swiper('.gallery-top', {
     swiper: galleryThumbs
   }
 });
-var swiperSaleMobile = new Swiper('.sales-block-mobile .swiper-container', {
+var swiperSaleMobile = new Swiper('.sales-block-mobile--first .swiper-container', {
 	pagination: {
 		el: '.swiper-pagination',
 	},
+});
+var swiperSaleMobileSecond = new Swiper('.sales-block-mobile--second .swiper-container', {
+  pagination: {
+    el: '.swiper-pagination',
+  },
 });

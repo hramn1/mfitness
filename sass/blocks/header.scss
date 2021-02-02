@@ -5,7 +5,6 @@
 		margin: 0 23px 0 12px;
 		color: $white;
 		font-size: 14px;
-
 	}
 }
 .top-links{
@@ -67,7 +66,6 @@
     display: none;
     top: 130px;
     width: 100%;
-    height: 640px;
     border-radius: 3px;
     border: 1px solid #333333;
 		z-index: 10;
@@ -279,7 +277,6 @@
 }
 .dropdown-menu{
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   padding: 10px;
   height: 100%;
@@ -364,7 +361,6 @@
 	}
 	&__dropdown-menu{
 		&--show{
-			height: 900px;
 			top: 80px;
 		}
 	}
@@ -455,7 +451,6 @@
     grid-template-columns:  auto auto auto;
 		font-size: 12px;
 		&__dropdown-menu{
-			height: 1200px;
 			top:70px;
 		}
 		&__logo{
@@ -500,14 +495,31 @@
 		}
 		&__list{
 			display: none;
+      & li{
+        padding: 6px 0;
+      }
+      &--show{
+        display: block;
+      }
 		}
 		&__content{
 			margin-left: 30px;
+      flex-grow: 1;
+      position: relative;
+      padding-right:  30px;
+      &::after{
+        @include pseudoEl(17px, 19px);
+        background-image: url(../img/chevron-down.svg);
+        right: 0;
+        top: 5px;
+        background-repeat: no-repeat;
+      }
 		}
 		&__title{
 			font-size: 16px;
 			font-weight: 700;
 			margin-top: 7px;
+      padding-bottom: 10px;
 			cursor: pointer;
 		}
 	}

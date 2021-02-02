@@ -43,7 +43,8 @@
     margin-right: auto;
   }
   & .swiper-slide {
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
   }
   & .gallery-top {
@@ -138,4 +139,7 @@
 	    opacity: 1;
 	  }
 	}
+  .sales-block-mobile .swiper-pagination{
+    bottom: 20px;
+  }
 }
