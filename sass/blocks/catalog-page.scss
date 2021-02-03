@@ -2,11 +2,7 @@
 	display: grid;
 	grid-template-columns: 1fr 1160px;
 }
-.catalog-menu{
-  &__list{
-    display: none;
-  }
-}
+
 .catalog-goods{
   &__title{
     @include typography(24px, 700);
@@ -24,8 +20,34 @@
     display: block;
     padding: 10px 12px;
     border-bottom: 1px solid #c6c6c6;
-
+		position: relative;
+		cursor: pointer;
+		&::after{
+			@include pseudoEl(17px, 19px);
+			background-image: url(../img/chevron-down.svg);
+			right: 10px;
+			top: 10px;
+			background-repeat: no-repeat;
+		}
   }
+	&__list{
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding: 10px 12px;
+		border-bottom: 1px solid #ddd;
+		background-color: #f9f9f9;
+		&--show{
+			display: block;
+		}
+	}
+	&__item{
+		padding-top: 10px;
+		& a{
+			color: #333;
+			font-weight: 700;
+		}
+	}
 }
 .submenu-catalog{
   padding: 0 12px;
@@ -35,6 +57,7 @@
     margin: 0;
     @include typography(16px, 700);
     border-bottom: 1px solid #c6c6c6;
+		position: relative;
   }
   &__list{
     list-style: none;

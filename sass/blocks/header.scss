@@ -502,6 +502,9 @@
         display: block;
       }
 		}
+		&__item{
+			width: 100%;
+		}
 		&__content{
 			margin-left: 30px;
       flex-grow: 1;

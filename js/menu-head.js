@@ -5,6 +5,8 @@
   const catalogBtn = document.querySelectorAll('.catalog-main-page__title');
   const catalogList = document.querySelectorAll('.catalog-main-page__list');
   const dropDownCatalog = document.querySelectorAll('.dropdown-menu__content');
+  const btnCatalogMenu = document.querySelector('.catalog-menu__title');
+
   const openedMenu = (evt)=>{
     const dropDownMenu = document.querySelector(`.bottom-head__dropdown-menu`);
     const iconMenu = document.querySelector(`.bottom-head__menu-btn`);
@@ -30,9 +32,14 @@
   const openedDropCatalog = (evt) =>{
     evt.target.children[1].classList.toggle('dropdown-menu__list--show');
   }
+  const openedCatalogMenu = (evt) => {
+    const catalogMenuList = document.querySelector('.catalog-menu__list');
+    catalogMenuList.classList.toggle('catalog-menu__list--show')
+  }
   btnOpenTopMenu.addEventListener(`click`, openedTopMenu);
   btnOpenMenu.addEventListener('click', openedMenu);
   btnMainMenuOpen.addEventListener('click', openedMainMenu);
+  btnCatalogMenu.addEventListener('click', openedCatalogMenu);
   for(let i = 0; i < catalogBtn.length; i++){
     catalogBtn[i].addEventListener('click', openedCatalog);
   }
