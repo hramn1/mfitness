@@ -4,10 +4,24 @@
   const btnMainMenuOpen = document.querySelector(`.mobile-open-menu-btn`);
   const catalogBtn = document.querySelectorAll('.catalog-main-page__title');
   const catalogList = document.querySelectorAll('.catalog-main-page__list');
-  const dropDownCatalog = document.querySelectorAll('.dropdown-menu__content');
-  const btnCatalogMenu = document.querySelector('.catalog-menu__title');
-
-  const openedMenu = (evt)=>{
+  if(document.querySelector('.catalog-menu__title')){
+    const btnCatalogMenu = document.querySelector('.catalog-menu__title');
+    const openedCatalogMenu = function (evt) {
+      const catalogMenuList = document.querySelector('.catalog-menu__list');
+      catalogMenuList.classList.toggle('catalog-menu__list--show')
+    }
+    btnCatalogMenu.addEventListener('click', openedCatalogMenu);
+  }
+    if(document.querySelectorAll('.dropdown-menu__content')){
+    const dropDownCatalog = document.querySelectorAll('.dropdown-menu__content');
+    const openedDropCatalog = function (evt) {
+      evt.currentTarget.children[1].classList.toggle('dropdown-menu__list--show');
+    }
+    for(let i = 0; i < dropDownCatalog.length; i++){
+      dropDownCatalog[i].addEventListener('click', openedDropCatalog, true);
+    }
+  }
+  const openedMenu = function(evt) {
     const dropDownMenu = document.querySelector(`.bottom-head__dropdown-menu`);
     const iconMenu = document.querySelector(`.bottom-head__menu-btn`);
     if(dropDownMenu.classList.contains('bottom-head__dropdown-menu--show')){
@@ -29,21 +43,12 @@
   const openedCatalog = (evt) => {
    evt.target.nextElementSibling.classList.toggle('catalog-main-page__list--show');
   }
-  const openedDropCatalog = (evt) =>{
-    evt.target.children[1].classList.toggle('dropdown-menu__list--show');
-  }
-  const openedCatalogMenu = (evt) => {
-    const catalogMenuList = document.querySelector('.catalog-menu__list');
-    catalogMenuList.classList.toggle('catalog-menu__list--show')
-  }
+
+
   btnOpenTopMenu.addEventListener(`click`, openedTopMenu);
   btnOpenMenu.addEventListener('click', openedMenu);
   btnMainMenuOpen.addEventListener('click', openedMainMenu);
-  btnCatalogMenu.addEventListener('click', openedCatalogMenu);
   for(let i = 0; i < catalogBtn.length; i++){
     catalogBtn[i].addEventListener('click', openedCatalog);
-  }
-  for(let i = 0; i < dropDownCatalog.length; i++){
-    dropDownCatalog[i].addEventListener('click', openedDropCatalog);
   }
 })();
