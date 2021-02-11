@@ -65,22 +65,27 @@
 	}
 }
 .popular-catalog{
-	@include flexCase();
+	@include flexCase(flex-start);
 	@include resetMar();
 	list-style: none;
 	color: #333333;
 	&__item {
 		width: 216px;
 		margin-bottom: 24px;
+    margin-right: 15px;
 		border: 1px solid transparent;
 		transition: border 500ms;
 		& a {
 			display: flex;
 			flex-direction: column;
-			justify-content: space-between;
+			justify-content: flex-end;
 			height: 100%;
 			color: #333333;
 			transition: color 500ms;
+      & img{
+        margin: auto;
+        height: auto;
+      }
 		}
 		&:hover{
 			border: 1px solid $blue-color;
