@@ -4,6 +4,9 @@
   const btnMainMenuOpen = document.querySelector(`.mobile-open-menu-btn`);
   const catalogBtn = document.querySelectorAll('.catalog-main-page__title');
   const catalogList = document.querySelectorAll('.catalog-main-page__list');
+
+
+
   if(document.querySelector('.catalog-menu__title')){
     const btnCatalogMenu = document.querySelector('.catalog-menu__title');
     const openedCatalogMenu = function (evt) {
@@ -42,6 +45,30 @@
   }
   const openedCatalog = (evt) => {
    evt.target.nextElementSibling.classList.toggle('catalog-main-page__list--show');
+  }
+
+  if(document.querySelectorAll('.product-tabs__tab')){
+    const productTab = document.querySelectorAll('.product-tabs__tab');
+    const tabDivs = document.querySelectorAll('.product-tabs>div');
+
+    const openedTabs = (evt) => {
+      for(let i = 0; i < productTab.length; i++){
+        productTab[i].classList.remove('product-tabs__tab--active');
+        tabDivs[i].classList.remove('show-tab');
+      }
+      evt.currentTarget.classList.add('product-tabs__tab--active');
+      if(evt.currentTarget.id === "#tab-about"){
+        document.querySelector('.js-about').classList.add('show-tab')
+      } else if (evt.currentTarget.id === "#tab-charac") {
+        document.querySelector('.js-charac').classList.add('show-tab')
+      } else if (evt.currentTarget.id === "#tab-brend") {
+        document.querySelector('.js-brend').classList.add('show-tab')
+      }
+    }
+
+    for(let i = 0; i < productTab.length; i++){
+      productTab[i].addEventListener('click', openedTabs)
+    }
   }
 
 

@@ -143,6 +143,12 @@
 			border-bottom: 2px solid #00649a;
 		}
   }
+	& div{
+		display: none;
+	}
+	& .show-tab{
+		display: block;
+	}
 }
 .counter-goods{
   width: 140px;
