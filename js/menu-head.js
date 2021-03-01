@@ -78,4 +78,17 @@
   for(let i = 0; i < catalogBtn.length; i++){
     catalogBtn[i].addEventListener('click', openedCatalog);
   }
+  if(document.querySelector('.sales-goods')){
+    let btnShowMoreSale = document.querySelector('.sales-goods__moreBtn');
+    let salesItem = document.querySelectorAll('.sales-catalog__item');
+    for(let i = 12; i < salesItem.length; i++){
+      salesItem[i].style.display = "none";
+    }
+    btnShowMoreSale.addEventListener('click', function (evt) {
+      for(let i = 12; i < salesItem.length; i++){
+        salesItem[i].style.display = "block";
+      }
+      btnShowMoreSale.style.display = "none";
+    })
+  }
 })();

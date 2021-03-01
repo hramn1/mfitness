@@ -40,9 +40,13 @@
 			height: 100%;
 			display: flex;
 			flex-direction: column;
-			justify-content: space-between;
+			justify-content: flex-start;
 			color: $top-head;
 			transition: color 500ms;
+			& img {
+				margin: auto;
+				height: auto;
+			}
 		}
 		& p{
 		 text-align: center;
