@@ -22,12 +22,28 @@
 	width: 100%;
 	border-collapse: collapse;
 	& td:nth-child(2){
-		width: 50%;
+		width: 40%;
+	}
+	& td:nth-child(1){
+		width: 20%;
+	}
+	& td:nth-child(3){
+		width: 15%;
+	}
+	& td:nth-child(4){
+		width: 20%;
+		text-align: right;
+		padding-right: 10px
+	}
+	& td:nth-child(5){
+		width: 5%;
+	}
+	& th:nth-child(4){
+		text-align: right;
 	}
 	& th{
 		color: #6c6c6c;
 		font-size: 14px;
-		padding-left: 20px;
 		padding-top: 10px;
 		padding-bottom: 6px;
 	}
@@ -52,10 +68,13 @@
 		border: 1px solid #c6c6c6;
 		display: flex;
 		height: 40px;
+		margin: 0 auto;
 		box-sizing: border-box;
 		align-items: center;
+		text-align: center;
 		& input{
 			border: 0;
+			text-align: center;
 			width: 40%;
 			&:hover{
 				border:0;
@@ -95,7 +114,7 @@
 .cart-form{
 	display: grid;
 	grid-template-columns: 335px 335px 335px;
-	grid-auto-rows: auto auto auto auto auto;
+	grid-auto-rows: auto auto auto auto auto auto;
 	grid-column-gap: 24px;
 	grid-row-gap: 24px;
 	& label{
@@ -190,7 +209,21 @@
 	}
 }
 .btn-cart-form{
-	display: none;
+	grid-row-start: 6;
+	display: block;
+	width: 270px;
+	margin-bottom: 20px;
+	background-color: $blue-color;
+	color: white;
+	border:0;
+	text-align: center;
+	cursor: pointer;
+	padding: 15px 0;
+	border-radius: 5px;
+	&:hover{
+		background-color: darken($blue-color, 10%);
+	}
+	// display: none;
 }
 .cart-popup-subscribe{
 	padding-top: 55px;
@@ -252,22 +285,6 @@
 		padding-left: 10px;
 		position: relative;
 	}
-	&::after{
-		position: absolute;
-		content: "";
-		display: block;
-		width: 40px;
-		height: 40px;
-		top: 0;
-		right: 0;
-		border-radius: 0 5px 5px 0;
-		background-color: #00649a;
-		background-image: url(../img/check-solid.svg);
-		background-position: 50% 50%;
-		background-size: 50%;
-		background-repeat: no-repeat;
-
-	}
 }
 .cart-popup-btn{
 	margin-top: 30px;
@@ -279,12 +296,27 @@
 	background-color: $blue-color;
  	color: white;
 	border:0;
+	text-align: center;
 	cursor: pointer;
 	padding: 15px 0;
 	border-radius: 5px;
 	&:hover{
 		background-color: darken($blue-color, 10%);
 	}
+}
+.check-promo{
+		position: absolute;
+		display: block;
+		width: 40px;
+		height: 40px;
+		top: 0;
+		right: 0;
+		border-radius: 0 5px 5px 0;
+		background-color: #00649a;
+		background-image: url(../img/check-solid.svg);
+		background-position: 50% 50%;
+		background-size: 50%;
+		background-repeat: no-repeat;
 }
 .block-check input:checked + label::before{
 	background-image: url(../img/check-solid-black.svg);
