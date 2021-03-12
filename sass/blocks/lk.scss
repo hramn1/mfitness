@@ -70,3 +70,34 @@
 		}
 	}
 }
+@media (max-width: $medium-desktop) {
+
+}
+// $small-desktop:  1280px;
+@media (max-width: $small-desktop) {
+
+}
+// $large-tablet: 1025px;
+@media(max-width: $large-tablet){
+	.lk-forma{
+		display: block;
+		&__title{
+			margin-bottom: 20px;
+		}
+		& div{
+			margin-bottom: 12px;
+		}
+		& button {
+			margin-bottom: 12px;
+			width: 100%;
+		}
+	}
+	.table-orders td {
+		font-size: 12px;
+	}
+}
+// $small-tablet: 700px;
+// $mobile:  500px;
+@media (max-width: $small-tablet) {
+
+}
