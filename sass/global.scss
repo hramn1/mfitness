@@ -101,6 +101,17 @@ a{
 	padding: 0 2px;
 	margin: 0 auto;
 }
+.container-landing{
+  width: 1180px;
+  padding: 0 2px;
+  margin: 0 auto;
+  &--header{
+    border-bottom: 1px solid $top-head;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 21px;
+  }
+}
 @media (max-width: $medium-desktop) {
   .container {
     width: 1260px;
