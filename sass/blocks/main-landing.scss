@@ -318,12 +318,12 @@
 		&::before{
 			height: 72px;
 			background-size: contain;
-			top: 210px;
+			top: 175px;
 		}
 		&::after{
 			height: 72px;
 			background-size: contain;
-			top: 210px;
+			top: 175px;
 		}
 	}
 	.landing-about{
@@ -350,17 +350,17 @@
 			position: relative;
 			z-index: 3;
 			background-color: #fff;
-			&::after{
-				display: block;
-				content: "";
-				height: 72px;
-				width: 50%;
-				position: absolute;
-				background-image: url(../img/second-bg.svg);
-				background-size: contain;
-				top: 20px;
-				z-index: -1;
-			}
+			// &::after{
+			// 	display: block;
+			// 	content: "";
+			// 	height: 72px;
+			// 	width: 50%;
+			// 	position: absolute;
+			// 	background-image: url(../img/second-bg.svg);
+			// 	background-size: contain;
+			// 	top: 20px;
+			// 	z-index: -1;
+			// }
 		}
 		&__title{
 			font-size: 18px;
@@ -407,6 +407,16 @@
 	.gallery-choise{
 		& div{
 			flex-basis: 26%;
+		}
+	}
+}
+@media (max-width: $mobile) {
+	.landing-banner{
+		&::before{
+			top:210px;
+		}
+		&::after{
+			top:210px;
 		}
 	}
 }
