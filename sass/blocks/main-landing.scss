@@ -103,6 +103,18 @@
 		font-size: 18px;
 		font-weight: 500;
 		line-height: 30px;
+		position: relative;
+		&::before{
+			content: "";
+			position: absolute;
+			width: 20px;
+			height: 19px;
+			display: block;
+			background-image: url('../img/check-adv.svg');
+			background-repeat: no-repeat;
+			left: 0;
+			top: 5px;
+		}
 	}
 }
 .landing-advantages-banner{
@@ -122,6 +134,11 @@
 		font-size: 48px;
 		font-weight: 700;
 		text-align: center;
+	}
+	&__text{
+		font-size: 18px;
+		font-weight: 700;
+		padding-left: 25px;
 	}
 }
 .landing-tabs{
@@ -180,5 +197,37 @@
 					transition: transform 400ms;
 				}
 			}
+	}
+}
+.landing-gallery{
+	padding-top: 40px;
+	&__title{
+		font-size: 48px;
+		font-weight: 700;
+		color: $landing-red;
+		text-align: center;
+		margin-top: 0;
+	}
+}
+.gallery-choise{
+	@include flexCase();
+	align-items: center;
+	& div{
+		flex-basis: 24%;
+		text-align: center;
+		margin-bottom: 45px;
+	}
+}
+@media (max-width: $small-desktop) {
+	.landing-banner{
+		padding-top: 50px;
+		&__title{
+			font-size: 40px;
+		}
+		&__text{
+			margin-top: 40px;
+			margin-bottom: 50px;
+			font-size: 15px;
+		}
 	}
 }

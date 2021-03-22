@@ -111,29 +111,114 @@ a{
     justify-content: space-between;
     padding-bottom: 21px;
   }
+  &--footer{
+    border-top: 1px solid $top-head;
+    background-color: #ffffff;
+    padding: 24px;
+  }
 }
 @media (max-width: $medium-desktop) {
   .container {
     width: 1260px;
+  }
+  .container-landing{
+    width: 1180px;
+    padding: 0 2px;
+    margin: 0 auto;
+    &--header{
+      border-bottom: 1px solid $top-head;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 21px;
+    }
+    &--footer{
+      border-top: 1px solid $top-head;
+      background-color: #ffffff;
+      padding: 24px;
+    }
   }
 }
 @media (max-width: $small-desktop) {
   .container {
     width: 984px;
   }
+  .container-landing{
+    width: 984px;
+    padding: 0 2px;
+    margin: 0 auto;
+    &--header{
+      border-bottom: 1px solid $top-head;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 21px;
+    }
+    &--footer{
+      border-top: 1px solid $top-head;
+      background-color: #ffffff;
+      padding: 24px;
+    }
+  }
 }
 @media (max-width: $large-tablet) {
   .container {
     width: 680px;
+  }
+  .container-landing{
+    width: 680px;
+    padding: 0 2px;
+    margin: 0 auto;
+    &--header{
+      border-bottom: 1px solid $top-head;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 21px;
+    }
+    &--footer{
+      border-top: 1px solid $top-head;
+      background-color: #ffffff;
+      padding: 24px;
+    }
   }
 }
 @media (max-width: $small-tablet) {
   .container {
     width: 480px;
   }
+  .container-landing{
+    width: 480px;
+    padding: 0 2px;
+    margin: 0 auto;
+    &--header{
+      border-bottom: 1px solid $top-head;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 21px;
+    }
+    &--footer{
+      border-top: 1px solid $top-head;
+      background-color: #ffffff;
+      padding: 24px;
+    }
+  }
 }
 @media (max-width: $mobile) {
   .container {
     width: 324px;
+  }
+  .container-landing{
+    width: 324px;
+    padding: 0 2px;
+    margin: 0 auto;
+    &--header{
+      border-bottom: 1px solid $top-head;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 21px;
+    }
+    &--footer{
+      border-top: 1px solid $top-head;
+      background-color: #ffffff;
+      padding: 24px;
+    }
   }
 }

@@ -1,0 +1,36 @@
+ .footer-landing{
+	 background-image: url(../img/first-bg.svg);
+	 background-repeat: repeat-x;
+	 background-position: 0 15px;
+
+ }
+.footer-top{
+	display: flex;
+	justify-content: space-between;
+}
+.landing-rules{
+	padding-left: 60px;
+	& a {
+		display: block;
+		color: #1c61ab;
+		font-size: 18px;
+		font-weight: 400;
+		text-decoration: underline;
+		padding-bottom: 15px;
+	}
+}
+.landing-contact{
+	& a{
+		font-size: 18px;
+		font-weight: 700;
+		color: #333333;
+		display: block;
+		padding-bottom: 15px;
+	}
+}
+.landing-copyright{
+	margin: 0 0  5px;
+	font-family: Roboto;
+	font-size: 18px;
+	font-weight: 400;
+}
