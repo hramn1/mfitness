@@ -64,3 +64,28 @@
 		}
 	}
 }
+@media (max-width: $small-tablet) {
+	.landing-menu{
+		& img{
+			width: 148px;
+			height: 34px;
+		}
+		&__item{
+			display: none;
+			&:first-child{
+				display: block;
+				margin-right: 20px;
+			}
+		}
+	}
+	.landing-user{
+		&__login{
+			font-size: 14px;
+			margin-right: 16px;
+		}
+		&__reg{
+			font-size: 14px;
+			padding: 10px;
+		}
+	}
+}

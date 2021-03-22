@@ -205,18 +205,47 @@
 	</div>
 </footer>
 <div class="popup popup--login">
-	<div class="popup__user"><a href="">Вход</a><a href="">Регистрация</a></div>
-	<form action="">
-		<label for="">Логин</label>
+	<div class="popup__user">
+		<a class="popup__link-login" href="">Вход</a>
+		<a class="popup__link-reg" href="">Регистрация</a>
+	</div>
+	<form class="popup__form" action="">
+		<label class="label__user" for="">Логин</label>
 		<input type="text">
-		<label for="">Пароль</label>
+		<label class="label__user" for="">Пароль</label>
 		<input type="password">
-		<button type="button" name="button">Войти</button>
+		<button class="popup__btn" type="button" name="button">Войти</button>
 	</form>
-	<p>Хотите начать работать с нами? Узнать больше.
+	<p class="popup__colab">Хотите начать работать с нами? Узнать больше.
 		Пройдите регистрацию для юридических лиц.
 	</p>
 </div>
+<div class="popup popup--reg">
+	<h2>Регистрация нового клиента</h2>
+	<form class="popup__form popup__form--reg" action="">
+		<label class="label__user" for="email">Email<span>*</span></label>
+		<input id="email" type="text">
+		<label class="label__user" for="">Телефон<span>*</span></label>
+		<input type="text">
+		<label class="label__user" for="">Фамилия<span>*</span></label>
+		<input type="text">
+		<label class="label__user" for="">Имя<span>*</span></label>
+		<input type="text">
+		<label class="label__user" for="">Компания<span>*</span></label>
+		<input type="text">
+		<label class="label__user" for="">ИНН<span>*</span></label>
+		<input type="text">
+		<div class="reg-privacy">
+			<p>Поля, обозначенные символом «*», обязательны для заполнения</p>
+			<input id="privacy" type="checkbox">
+			<label for="privacy">Согласен с обработкой персональных данных</label>
+			<input id="akcii" type="checkbox">
+			<label for="akcii">Согласен на информирование по email об акциях и скидках</label>
+			<button class="popup__btn" type="button" name="button">Регистрация</button>
+		</div>
+	</form>
+</div>
+<div class="modal-overlay"></div>
 <script src="js/landing.js"></script>
 </body>
 </html>

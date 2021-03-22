@@ -168,7 +168,6 @@ a{
     padding: 0 2px;
     margin: 0 auto;
     &--header{
-      border-bottom: 1px solid $top-head;
       display: flex;
       justify-content: space-between;
       padding-bottom: 21px;
@@ -189,15 +188,15 @@ a{
     padding: 0 2px;
     margin: 0 auto;
     &--header{
-      border-bottom: 1px solid $top-head;
       display: flex;
+      border-bottom: 0;
       justify-content: space-between;
       padding-bottom: 21px;
     }
     &--footer{
       border-top: 1px solid $top-head;
       background-color: #ffffff;
-      padding: 24px;
+      padding: 15px 5px;
     }
   }
 }
@@ -210,15 +209,14 @@ a{
     padding: 0 2px;
     margin: 0 auto;
     &--header{
-      border-bottom: 1px solid $top-head;
       display: flex;
       justify-content: space-between;
       padding-bottom: 21px;
     }
     &--footer{
+      padding: 15px 5px;
       border-top: 1px solid $top-head;
       background-color: #ffffff;
-      padding: 24px;
     }
   }
 }

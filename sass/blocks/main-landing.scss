@@ -230,4 +230,183 @@
 			font-size: 15px;
 		}
 	}
+	.landing-banner::after, .landing-banner::before{
+		top: 455px;
+	}
+	.landing-about{
+		padding-top: 50px;
+		padding-bottom: 40px;
+		&__title{
+			font-size: 40px;
+		}
+		&__text{
+			font-size: 15px;
+			margin: 0 110px;
+		}
+	}
+	.landing-advantages{
+		&__title{
+			font-size: 40px;
+		}
+	}
+	.advantages-list{
+		margin-top: 40px;
+		&__item{
+			padding: 20px;
+		}
+		&__title{
+			font-size: 25px;
+		}
+	}
+	.advantages-content{
+		margin-bottom: 20px;
+		& li{
+			font-size: 15px;
+			line-height: 25px;
+		}
+	}
+	.landing-advantages-banner p{
+		font-size: 40px;
+	}
+	.landing-faq{
+		&__title{
+			font-size: 40px;
+		}
+		&__text{
+			font-size: 15px;
+		}
+	}
+	.landing-tabs{
+		&__btn{
+			font-size: 15px;
+		}
+		&__text{
+			font-size: 15px;
+		}
+	}
+	.landing-gallery{
+		&__title {
+			font-size: 40px;
+		}
+	}
+	.gallery-choise{
+		& div{
+			flex-basis: 21%;
+		}
+		&__img{
+			height: 100%;
+		}
+	}
+}
+@media (max-width: $small-tablet) {
+  .landing-banner{
+    padding-top: 15px;
+    &__title{
+      margin: 0;
+      font-size: 18px;
+    }
+    &__text{
+      margin: 20px 0;
+      font-size: 14px;
+    }
+		&__img{
+			width: 250px;
+			border-radius: 10px;
+			border: 6px solid #333;
+			box-sizing: border-box;
+		}
+		&::before{
+			height: 72px;
+			background-size: contain;
+			top: 210px;
+		}
+		&::after{
+			height: 72px;
+			background-size: contain;
+			top: 210px;
+		}
+	}
+	.landing-about{
+		&__title{
+			font-size: 18px;
+			margin-bottom: 15px;
+		}
+		&__text{
+			margin: 0;
+			font-size: 12px;
+			line-height: 16px;
+		}
+	}
+	.landing-advantages{
+		&__title{
+			font-size: 18px;
+			margin: 0 20px;
+		}
+	}
+	.advantages-list{
+		&__item{
+			flex-basis: 100%;
+			margin-bottom: 20px;
+			position: relative;
+			z-index: 3;
+			background-color: #fff;
+			&::after{
+				display: block;
+				content: "";
+				height: 72px;
+				width: 50%;
+				position: absolute;
+				background-image: url(../img/second-bg.svg);
+				background-size: contain;
+				top: 20px;
+				z-index: -1;
+			}
+		}
+		&__title{
+			font-size: 18px;
+		}
+	}
+	.advantages-content{
+		margin-top: 20px;
+		margin-bottom: 0;
+		& li {
+			font-size: 14px;
+
+		}
+	}
+	.landing-advantages-banner{
+		padding: 30px 12px;
+		& p {
+			font-size: 18px;
+			line-height: normal;
+
+		}
+	}
+	.landing-faq{
+		&__title{
+			font-size: 18px;
+			margin-top: 45px;
+		}
+		&__text{
+			padding-left: 0;
+			font-size: 14px;
+		}
+	}
+	.landing-tabs{
+		padding: 0 12px 15px;
+		&__btn{
+			font-size: 14px;
+			padding: 10px 20px 10px 10px;
+		}
+	}
+	.landing-gallery{
+		&__title{
+			font-size: 18px;
+		}
+	}
+	.gallery-choise{
+		& div{
+			flex-basis: 26%;
+		}
+	}
 }
