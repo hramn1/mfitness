@@ -127,6 +127,17 @@
 		font-size: 48px;
 		font-weight: 700;
 	}
+	&__reg{
+		background-color: #fff;
+		padding: 0 10px;
+    padding-bottom: 0px;
+		display: inline-block;
+		border-radius: 8px;
+		line-height: 100%;
+		padding-bottom: 5px;
+		color: $landing-red;
+		cursor: pointer;
+	}
 }
 .landing-faq{
 	&__title{
@@ -296,6 +307,41 @@
 		&__img{
 			height: 100%;
 		}
+	}
+}
+@media (max-width: $large-tablet){
+	.landing-banner{
+		&__title{
+			font-size: 38px;
+			margin: 0;
+		}
+		&::after{
+			top: 385px;
+		}
+		&::before{
+			top: 385px;
+		}
+	}
+	.landing-about{
+		&__text{
+			margin: 0;
+		}
+	}
+	.landing-advantages{
+		&__title{
+			font-size: 34px;
+		}
+	}
+	.advantages-list{
+		&__title{
+			font-size: 20px;
+		}
+	}
+	.landing-advantages-banner p{
+		font-size: 34px;
+	}
+	.landing-rules{
+		display: none;
 	}
 }
 @media (max-width: $small-tablet) {

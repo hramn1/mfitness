@@ -64,6 +64,27 @@
 		}
 	}
 }
+@media (max-width: $large-tablet) {
+	.landing-menu{
+		&__item{
+			font-size: 12px;
+			margin-right: 10px;
+			& img{
+				width: 120px;
+			}
+		}
+	}
+	.landing-user{
+		&__login{
+			font-size: 12px;
+			margin-right: 10px;
+		}
+		&__reg{
+			font-size: 12px;
+			padding: 12px 15px;
+		}
+	}
+}
 @media (max-width: $small-tablet) {
 	.landing-menu{
 		& img{

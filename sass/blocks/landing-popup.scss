@@ -129,6 +129,7 @@
 	background-repeat: no-repeat;
 }
 .popup--reg{
+	position: absolute;
   & label{
    & span {
     color: #882138;
@@ -150,4 +151,23 @@
 }
 .popup.popup--show{
 	display: block;
+}
+.popup-close{
+	position: absolute;
+	display: inline-block;
+	top: -25px;
+	text-transform: uppercase;
+	color: #fff;
+	right: 0;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: 700;
+
+}
+@media (max-width: $mobile) {
+	.popup{
+		width: 350px;
+		margin-left: -175px;
+
+	}
 }

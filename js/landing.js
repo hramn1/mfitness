@@ -36,4 +36,43 @@
 	for(let item of btnOpened){
 		item.addEventListener('click', openedTabs)
 	}
+
+	let btnLogin = document.querySelector('.landing-user__login');
+	const popupLogin = document.querySelector('.popup--login');
+	const modalOver = document.querySelector('.modal-overlay');
+	const closePopupBtn = document.querySelectorAll('.popup-close');
+	const btnReg = document.querySelector('.landing-user__reg');
+	const popupReg = document.querySelector('.popup--reg');
+	const bannerReg = document.querySelector('.landing-advantages-banner__reg');
+	const loginReg = document.querySelector('.popup__link-reg');
+	btnLogin.onclick = (evt) =>{
+		evt.preventDefault();
+		popupLogin.classList.add('popup--show');
+		modalOver.classList.add('modal-overlay--show');
+	}
+	for(let item of closePopupBtn){
+		item.onclick = (evt) => {
+			evt.target.parentElement.classList.remove("popup--show");
+			modalOver.classList.remove('modal-overlay--show');
+		}
+	}
+	bannerReg.onclick = (evt) => {
+		evt.preventDefault();
+		console.log(evt);
+		popupReg.classList.add('popup--show');
+		modalOver.classList.add('modal-overlay--show');
+		popupReg.style.top = evt.layerY - 400 + "px";
+	}
+	btnReg.onclick = (evt) =>{
+		evt.preventDefault();
+		popupReg.classList.add('popup--show');
+			popupReg.style.top = evt.layerY  + "px";
+		modalOver.classList.add('modal-overlay--show');
+	}
+	loginReg.onclick = (evt) => {
+		evt.preventDefault();
+		popupReg.classList.add('popup--show');
+		popupLogin.classList.remove('popup--show');
+		popupReg.style.top = evt.layerY  + "px";
+	}
 })()
