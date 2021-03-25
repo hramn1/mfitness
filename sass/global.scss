@@ -73,6 +73,9 @@
 
 *{
 	box-sizing: border-box;
+  &:focus{
+    outline: 1px dotted salmon;  
+  }
 }
 body{
 	@include typography();
@@ -81,10 +84,16 @@ body{
 button{
   @include typography();
   color: $top-head;
+  &:focus{
+    outline: 1px dotted salmon;
+  }
 }
 input{
   @include typography();
   color: $top-head;
+  &:focus{
+    outline: 1px dotted salmon;
+  }
 }
 img, iframe{
 	max-width: 100%;
@@ -92,6 +101,9 @@ img, iframe{
 a{
 	text-decoration: none;
   color: $blue-color;
+  &:focus{
+    outline: 1px dotted salmon;
+  }
 }
 .main{
   padding-bottom: 50px;

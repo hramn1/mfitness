@@ -75,4 +75,15 @@
 		popupLogin.classList.remove('popup--show');
 		popupReg.style.top = evt.layerY  + "px";
 	}
+	const scrollMenu = (evt) => {
+		evt.preventDefault()
+		let el = evt.target.hash;
+		document.querySelector(el).scrollIntoView({
+			 behavior: "smooth"
+		})
+	}
+	const menuBtn = document.querySelectorAll('.js-land-menu')
+	for(let it of menuBtn){
+		it.addEventListener('click', scrollMenu)
+	}
 })()
