@@ -20,11 +20,12 @@
 			color: darken($white, 15%);
 		}
 		&:active{
-			color: darken($white, 45%)
+			color: darken($white, 45%);
 		}
 		&--active{
 			background-color: #fff;
 			color: $top-head;
+			font-weight: 500;
 			&:hover{
 				color: lighten($top-head, 20%);
 			}
@@ -90,31 +91,33 @@
 			background-color: #fff;
 			top: 17px;
 			left: 13px;
-			transition: all 400ms ease;
+			transition: transform, background-color 400ms ease;
 			&::before{
 				@include pseudoEl(17px, 3px);
 				top: -6px;
 				background-color: #fff;
-				transition: all 400ms ease;
+				transform-origin: 0 0;
+				transition: transform 400ms ease;
 			}
 			&::after{
 				@include pseudoEl(17px, 3px);
 				top: 6px;
 				background-color: #fff;
-				transition: all 400ms ease;
+				transform-origin: 0 0;
+				transition: transform 400ms ease;
 			}
 			&--closed{
 				background-color: transparent;
-				transition: all 400ms ease;
+				transition: transform, background-color 400ms ease;
 				&::before{
 					transform: rotate(45deg);
 					transform-origin: 0 0;
-					transition: all 400ms ease;
+					transition: transform  400ms ease;
 				}
 				&::after{
 					transform: rotate(-45deg) translateX(-1.5px) translateY(-1.5px);
 					transform-origin: 0 0;
-					transition: all 400ms ease;
+					transition: transform 400ms ease;
 				}
 			}
 
@@ -310,6 +313,8 @@
     border: 1px solid #c6c6c6;
     flex-grow: 1;
     padding-left: 25px;
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;
     @include typography(14px, 400);
     &::placeholder{
       color: #c6c6c6;
@@ -319,7 +324,7 @@
     @include btn();
     padding-left: 27px;
     padding-right: 27px;
-    @include typography(16px, 700);
+    @include typography(14px, 700);
     border-radius: 0 3px 3px 0;
 		&:hover{
 			background-color: darken($blue-color, 10%);
@@ -435,7 +440,9 @@
 			position: absolute;
 			top: 28px;
 			left: -5px;
-	}
+			height: 12px;
+			overflow: hidden;
+}
 	.bottom-head .users-info__lk	.users-info__name{
 		display: block;
 		font-size: 12px;
@@ -443,6 +450,9 @@
 		position: absolute;
 		top: 28px;
 		left: -20px;
+	}
+	.search-form__btn{
+		font-size: 16px;
 	}
 }
 // $large-tablet: 1023px;
@@ -709,7 +719,7 @@
 		}
 	.bottom-head__catalog-menu .bottom-head__menu-btn--closed{
 		&::after{
-		transform: rotate(-45deg) translateX(-1px) translateY(-1px);
+		// transform: rotate(45deg) translateX(-1px) translateY(-1px);
 			}
 }
  .bottom-head .bottom-head__mail{

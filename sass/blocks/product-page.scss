@@ -274,6 +274,10 @@
 	&__add-btn{
 		margin: 20px auto;
 	}
+	&__price{
+		flex-basis: 60%;
+		text-align: right;
+	}
 }
 .product-tabs{
 	&__tab{

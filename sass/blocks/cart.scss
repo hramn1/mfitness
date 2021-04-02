@@ -3,6 +3,11 @@
 	grid-template-columns: 1fr 1fr;
 	grid-column-gap: 25px;
 }
+.cart-right{
+	position: sticky;
+	top:0;
+	height: 400px;
+}
 .cart-top{
 	display: flex;
 	justify-content: space-between;
@@ -206,6 +211,8 @@
 		resize: none;
 		width: 100%;
 		padding: 7px 0 0 10px;
+		border-radius: 5px;
+		border: 1px solid #c6c6c6;
 	}
 }
 .btn-cart-form{
@@ -389,6 +396,9 @@
 @media(max-width: $large-tablet){
 	.cart-main{
 		grid-template-columns: 1fr;
+	}
+	.cart-right{
+		height: auto;
 	}
 	.cart-form{
 		width: 100%;
