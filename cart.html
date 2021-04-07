@@ -353,7 +353,7 @@
 																</path>
 															</svg>Удалить все из корзины</a>
 				</div>
-				<form class="cart-form" action="">
+				<form class="cart-form" id="persFormCart" action="/">
 					<div class="block-surname">
 						<label for="surname">Фамилия<span>*</span></label>
 						<input id="surname" type="text">
@@ -408,7 +408,7 @@
 						<label for="comment-zakaz">Комментарий к заказу</label>
 						<textarea name="comment" id="comment-zakaz" rows="4" cols="20"></textarea>
 					</div>
-					<button class="btn-cart-form" type="submit" name="button">Оформить заказ</button>
+					<!-- <button class="btn-cart-form" type="submit" name="button">Оформить заказ</button> -->
 				</form>
 			</div>
 			<div class="cart-right">
@@ -431,7 +431,7 @@
 						<input type="text" name="" id="promo" value="MFOLrulez21">
             <a class="check-promo" href=""></a>
 					</div>
-					<a class="cart-popup-btn">Оформить заказ</a>
+					<button type="submit" form="persFormCart" class="cart-popup-btn">Оформить заказ</button>
 				</div>
 			</div>
 		</section>
