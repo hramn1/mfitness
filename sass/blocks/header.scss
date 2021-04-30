@@ -80,6 +80,7 @@
     padding-left: 40px;
     text-align: left;
     position: relative;
+		max-height: 40px;
 		&:hover{
 			background-color: darken($blue-color, 10%);
 		}
@@ -203,11 +204,13 @@
   }
   &__search{
     display: flex;
+		max-height: 40px ;
   }
 }
 .users-info{
   display: flex;
   justify-content: space-between;
+	max-width: 325px;
 	& p.users-info__name{
 		font-size: 14px;
 	}
@@ -453,6 +456,8 @@
 		position: absolute;
 		top: 28px;
 		left: -20px;
+		max-height: 28px;
+		overflow: clip;
 	}
 	.search-form__btn{
 		font-size: 16px;
