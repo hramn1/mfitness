@@ -599,7 +599,7 @@
 	.bottom-head{
 		grid-template-areas: "L L CA BTN"
 												"CM S S S";
-		grid-template-columns: 90px auto auto auto;
+		grid-template-columns: 95px auto auto auto;
 		&__dropdown-menu{
 			top: 130px;
 		}
@@ -653,9 +653,12 @@
 			grid-area: S;
 		}
 		&__logo{
+      height: 44px;
+      line-height: 44px;
 			& img{
 				width: 150px;
 				height: 34px;
+        vertical-align: bottom;
 			}
 		}
 		&__text{
