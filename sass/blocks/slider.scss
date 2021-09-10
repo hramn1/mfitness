@@ -1,6 +1,10 @@
 .swiper-container {
 	width: 100%;
 	height: 100%;
+	&.gallery-socks{
+		width: 700px;
+		height: 700px;
+	}
 }
 
 .swiper-slide {
@@ -38,9 +42,11 @@
 .product-page {
   & .swiper-container {
     width: 100%;
-    height: 300px;
     margin-left: auto;
     margin-right: auto;
+		&.gallery-thumbs-socks{
+			height: 100px;
+		}
   }
   & .swiper-slide {
     background-size: contain;
@@ -58,6 +64,9 @@
     align-self: center;
     box-sizing: border-box;
     padding: 10px 0;
+		&.gallery-socks{
+			width: 100%;
+		}
   }
   & .gallery-thumbs .swiper-slide {
     width: 100%;
