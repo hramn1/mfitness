@@ -6,6 +6,9 @@ var swiperBanner = new Swiper('.slider-block .swiper-container', {
 	pagination: {
 	el: '.swiper-pagination',
 	},
+	autoplay: {
+	delay: 5000,
+},
 });
 
 var galleryThumbs = new Swiper('.gallery-thumbs', {
